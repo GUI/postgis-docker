@@ -6,9 +6,9 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 ## Supported Tags and Respective Dockerfile Links
 
-<% versions.each do |postgresql_version, postgis_versions| -%>
+<%- versions.each do |postgresql_version, postgis_versions| -%>
 - PostgreSQL <%= postgresql_version %>
-  <% postgis_versions.each do |postgis_version, data| -%>
+  <%- postgis_versions.each do |postgis_version, data| -%>
   - PostGIS <%= postgis_version %>: [<%= data.fetch(:postgis_tags).map { |tag| "`#{tag}`" }.join(", ") %>](<%= data.fetch(:filename) %>)
-  <% end -%>
-<% end -%>
+  <%- end -%>
+<%- end -%>

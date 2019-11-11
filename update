@@ -3,7 +3,6 @@
 require "erb"
 require "fileutils"
 require "open-uri"
-require "awesome_print"
 
 FileUtils.rm_rf(Dir.glob("[0-9]*"))
 

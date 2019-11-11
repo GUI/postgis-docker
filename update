@@ -8,6 +8,8 @@ FileUtils.rm_rf(Dir.glob("[0-9]*"))
 
 docker_build_commands = []
 docker_push_commands = []
+all_postgis_tags = []
+versions = {}
 
 library = open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
   .read
@@ -18,9 +20,9 @@ library.each do |postgres|
   postgres_tags = postgres.fetch("Tags").split(/,\s*/)
   postgres_version_tags = postgres_tags - ["latest"]
   postgres_tag = postgres_version_tags.sort_by { |t| t.length }.last
+  postgres_version = postgres_version_tags.sort_by { |t| t.length }.first
 
-  if postgres.fetch("Directory").include?("alpine")
-  else
+  if !postgres.fetch("Directory").include?("alpine")
     system("docker", "pull", "postgres:#{postgres_tag}")
     postgis_packages = `docker run --rm postgres:#{postgres_tag} sh -c 'apt-get update && apt-cache search --full --names-only "^postgresql-$PG_MAJOR-postgis-[0-9\.]+$"'`
       .split(/[\r\n]{2,}/)
@@ -50,9 +52,18 @@ library.each do |postgres|
         postgis_tags << "latest"
       end
 
+      postgis_tags -= all_postgis_tags
+      all_postgis_tags += postgis_tags
+
       filename = File.join(postgres.fetch("Directory"), "postgis-#{postgis_major}", "Dockerfile")
       FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, "w") { |f| f.write(template) }
+
+      versions[postgres_version] ||= {}
+      versions[postgres_version][postgis_major] = {
+        :postgis_tags => postgis_tags,
+        :filename => filename,
+      }
 
       docker_build_commands << "docker build #{postgis_tags.map { |tag| "--tag 'nickblah/postgis:#{tag}'" }.join(" ")} --file #{filename} ."
       postgis_tags.each do |tag|
@@ -73,3 +84,8 @@ template = ERB.new(File.read("docker-push.erb"), nil, "-").result_with_hash({
 })
 File.open("docker-push", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-push")
+
+template = ERB.new(File.read("README.md.erb"), nil, "-").result_with_hash({
+  :commands => docker_push_commands,
+})
+File.open("README.md", "w") { |f| f.write(template) }

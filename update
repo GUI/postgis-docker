@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+require "erb"
+require "fileutils"
+require "open-uri"
+require "awesome_print"
+
+FileUtils.rm_rf(Dir.glob("[0-9]*"))
+
+library = open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
+  .read
+  .split(/[\r\n]{2,}/)
+  .select { |lines| lines.include?("Tags:") }
+  .map { |lines| Hash[lines.split(/[\r\n]/).map { |r| r.split(/:\s+/, 2) }] }
+library.each do |postgres|
+  postgres_tags = postgres.fetch("Tags").split(/,\s*/)
+  postgres_version_tags = postgres_tags - ["latest"]
+  postgres_tag = postgres_version_tags.sort_by { |t| t.length }.last
+
+  if postgres.fetch("Directory").include?("alpine")
+  else
+    system("docker", "pull", "postgres:#{postgres_tag}")
+    postgis_packages = `docker run --rm postgres:#{postgres_tag} sh -c 'apt-get update && apt-cache search --full --names-only "^postgresql-$PG_MAJOR-postgis-[0-9\.]+$"'`
+      .split(/[\r\n]{2,}/)
+      .select { |lines| lines.include?("Package:") }
+      .map { |lines| Hash[lines.split(/[\r\n]/).map { |r| r.split(/:\s+/, 2) }] }
+      .sort_by { |package| package.fetch("Version") }
+      .reverse
+    postgis_packages.each_with_index do |postgis_package, postgis_index|
+      postgis_major = postgis_package.fetch("Package").split("-postgis-", 2).last
+      postgis_version = postgis_package.fetch("Version").match(/^(((\d+)\.\d+)\.\d+)/)
+
+      template = ERB.new(File.read("Dockerfile.erb"), nil, "-").result_with_hash({
+        :postgres_tag => postgres_tag,
+        :postgis_major => postgis_major,
+        :postgis_version => postgis_package.fetch("Version"),
+      })
+
+      postgis_tags = postgres_version_tags.map do |postgres_tag|
+        tags = [
+          "#{postgres_tag}-postgis-#{postgis_version[1]}",
+          "#{postgres_tag}-postgis-#{postgis_version[2]}",
+          "#{postgres_tag}-postgis-#{postgis_version[3]}",
+        ]
+      end.flatten.uniq
+
+      if postgres_tags.include?("latest") && postgis_index == 0
+        postgis_tags << "latest"
+      end
+
+      filename = File.join(postgres.fetch("Directory"), "postgis-#{postgis_major}", "Dockerfile")
+      FileUtils.mkdir_p(File.dirname(filename))
+      File.open(filename, "w") { |f| f.write(template) }
+    end
+  end
+end

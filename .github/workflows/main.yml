@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update Dockerfiles
+        run: |
+          set -Eeuo pipefail
+
+          ./update
+          git remote -v
+          if [[ -n $(git status --porcelain) ]]; then
+            git config --global user.name "$GITHUB_ACTOR"
+            git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+            git add -A
+            git commit -m "Automated updates"
+            git push -u origin HEAD
+          fi

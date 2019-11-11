@@ -1,0 +1,11 @@
+FROM postgres:<%= postgres_tag %>
+
+ENV POSTGIS_MAJOR=<%= postgis_major %> \
+  POSTGIS_VERSION=<%= postgis_version %>
+
+RUN apt-get update && \
+  apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \
+  apt-get install -y --no-install-recommends \
+    postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR-scripts=$POSTGIS_VERSION \
+    postgis && \
+  rm -rf /var/lib/apt/lists/*

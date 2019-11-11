@@ -65,7 +65,7 @@ library.each do |postgres|
         :filename => filename,
       }
 
-      docker_build_commands << "docker build --cache-from 'nickblah/postgis:#{postgis_tags.first}' #{postgis_tags.map { |tag| "--tag 'nickblah/postgis:#{tag}'" }.join(" ")} --file #{filename} ."
+      docker_build_commands << "docker pull 'nickblah/postgis:#{postgis_tags.first}'; docker build --cache-from 'nickblah/postgis:#{postgis_tags.first}' #{postgis_tags.map { |tag| "--tag 'nickblah/postgis:#{tag}'" }.join(" ")} --file #{filename} ."
       postgis_tags.each do |tag|
         docker_push_commands << "docker push 'nickblah/postgis:#{tag}'"
       end

@@ -12,8 +12,8 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
       - name: Update Dockerfiles
-        uses: docker://ruby:2.6.5-alpine3.10
         run: |
           set -Eeuo pipefail
 

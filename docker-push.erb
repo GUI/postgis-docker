@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -Eeuxo pipefail
+
+<% commands.each do |command| -%>
+<%= command %>
+<% end -%>

@@ -6,6 +6,9 @@ require "open-uri"
 
 FileUtils.rm_rf(Dir.glob("[0-9]*"))
 
+docker_build_commands = []
+docker_push_commands = []
+
 library = open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
   .read
   .split(/[\r\n]{2,}/)
@@ -50,6 +53,23 @@ library.each do |postgres|
       filename = File.join(postgres.fetch("Directory"), "postgis-#{postgis_major}", "Dockerfile")
       FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, "w") { |f| f.write(template) }
+
+      docker_build_commands << "docker build #{postgis_tags.map { |tag| "--tag 'nickblah/postgis:#{tag}'" }.join(" ")} --file #{filename} ."
+      postgis_tags.each do |tag|
+        docker_push_commands << "docker push 'nickblah/postgis:#{tag}'"
+      end
     end
   end
 end
+
+template = ERB.new(File.read("docker-build.erb"), nil, "-").result_with_hash({
+  :commands => docker_build_commands,
+})
+File.open("docker-build", "w") { |f| f.write(template) }
+FileUtils.chmod(0755, "docker-build")
+
+template = ERB.new(File.read("docker-push.erb"), nil, "-").result_with_hash({
+  :commands => docker_push_commands,
+})
+File.open("docker-push", "w") { |f| f.write(template) }
+FileUtils.chmod(0755, "docker-push")

@@ -16,18 +16,13 @@ jobs:
       - name: Update Dockerfiles
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -Eeuxo pipefail
-
-          ./update
-          git remote -v
-          if [[ -n $(git status --porcelain) ]]; then
-            git config --global user.name "$GITHUB_ACTOR"
-            git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
-            git add -A
-            git commit -m "Automated updates"
-            set +x
-            git remote set-url --push origin "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-            set -x
-            git push origin HEAD:master
-          fi
+        run: ./update-ci
+      - name: Docker Build
+        run: ./docker-build
+      - name: Docker Registry Login
+        run: docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Docker Push
+        run: ./docker-push

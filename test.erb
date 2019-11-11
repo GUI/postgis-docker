@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+<%- versions.each do |postgresql_version, postgis_versions| -%>
+  <%- postgis_versions.each do |postgis_version, data| -%>
+    printf "<%= data.fetch(:postgis_tag) %>: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm <%= "#{docker_image}:#{data.fetch(:postgis_tag)}" %> 2>&1 || true)
+    if [[ $output =~ "PostGIS Tests: Error" ]]; then
+      echo "Error"
+      echo $output
+      echo
+    elif [[ $output =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      echo "Unexpected Error"
+      echo $output
+      echo
+    fi
+
+  <%- end -%>
+<%- end -%>

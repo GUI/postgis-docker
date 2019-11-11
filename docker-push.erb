@@ -2,6 +2,10 @@
 
 set -Eeuxo pipefail
 
-<% commands.each do |command| -%>
-<%= command %>
-<% end -%>
+<%- versions.each do |postgresql_version, postgis_versions| -%>
+  <%- postgis_versions.each do |postgis_version, data| -%>
+    <%- data.fetch(:postgis_tags).each do |postgis_tag| -%>
+      docker push '<%= "#{docker_image}:#{postgis_tag}" %>'
+    <%- end -%>
+  <%- end -%>
+<%- end -%>

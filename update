@@ -6,8 +6,7 @@ require "open-uri"
 
 FileUtils.rm_rf(Dir.glob("[0-9]*"))
 
-docker_build_commands = []
-docker_push_commands = []
+docker_image = "nickblah/postgis"
 all_postgis_tags = []
 versions = {}
 
@@ -61,31 +60,36 @@ library.each do |postgres|
 
       versions[postgres_version] ||= {}
       versions[postgres_version][postgis_major] = {
+        :postgis_tag => postgis_tags.first,
         :postgis_tags => postgis_tags,
         :filename => filename,
       }
-
-      docker_build_commands << "docker pull 'nickblah/postgis:#{postgis_tags.first}'; docker build --cache-from 'nickblah/postgis:#{postgis_tags.first}' #{postgis_tags.map { |tag| "--tag 'nickblah/postgis:#{tag}'" }.join(" ")} --file #{filename} ."
-      postgis_tags.each do |tag|
-        docker_push_commands << "docker push 'nickblah/postgis:#{tag}'"
-      end
     end
   end
 end
 
 template = ERB.new(File.read("docker-build.erb"), nil, "-").result_with_hash({
-  :commands => docker_build_commands,
+  :docker_image => docker_image,
+  :versions => versions,
 })
 File.open("docker-build", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-build")
 
 template = ERB.new(File.read("docker-push.erb"), nil, "-").result_with_hash({
-  :commands => docker_push_commands,
+  :docker_image => docker_image,
+  :versions => versions,
 })
 File.open("docker-push", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-push")
 
+template = ERB.new(File.read("test.erb"), nil, "-").result_with_hash({
+  :docker_image => docker_image,
+  :versions => versions,
+})
+File.open("test", "w") { |f| f.write(template) }
+FileUtils.chmod(0755, "test")
+
 template = ERB.new(File.read("README.md.erb"), nil, "-").result_with_hash({
-  :commands => docker_push_commands,
+  :versions => versions,
 })
 File.open("README.md", "w") { |f| f.write(template) }

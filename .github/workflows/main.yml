@@ -8,7 +8,7 @@ on:
     - cron: "39 3 * * *"
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -21,6 +21,8 @@ jobs:
         run: ./update-ci
       - name: Docker Build
         run: ./docker-build
+      - name: Test
+        run: ./test
       - name: Docker Registry Login
         run: docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
         env:

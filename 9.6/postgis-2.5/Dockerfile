@@ -10,3 +10,6 @@ RUN apt-get update && \
     postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR-scripts=$POSTGIS_VERSION \
     postgis && \
   rm -rf /var/lib/apt/lists/*
+
+LABEL org.opencontainers.image.source="https://github.com/GUI/postgis-docker" \
+  org.opencontainers.image.licenses="MIT"

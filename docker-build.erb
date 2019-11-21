@@ -4,6 +4,6 @@ set -Eeuxo pipefail
 
 <%- versions.each do |postgresql_version, postgis_versions| -%>
   <%- postgis_versions.each do |postgis_version, data| -%>
-    docker pull '<%= "#{docker_image}:#{data.fetch(:postgis_tag)}" %>'; docker build --cache-from '<%= "#{docker_image}:#{data.fetch(:postgis_tag)}" %>' <%= data.fetch(:postgis_tags).map { |tag| "--tag '#{docker_image}:#{tag}'" }.join(" ") %> --file <%= data.fetch(:filename) %> .
+    docker pull '<%= "#{docker_image}:#{data.fetch(:postgis_tag)}" %>' || true && docker build --pull --cache-from '<%= "#{docker_image}:#{data.fetch(:postgis_tag)}" %>' <%= data.fetch(:postgis_tags).map { |tag| "--tag '#{docker_image}:#{tag}'" }.join(" ") %> --file <%= data.fetch(:filename) %> .
   <%- end -%>
 <%- end -%>

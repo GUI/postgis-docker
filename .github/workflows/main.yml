@@ -30,9 +30,13 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker Push
         run: ./docker-push
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2.1.0
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKERHUB_REPOSITORY: nickblah/postgis
+      # Disable updating docker hub description in CI, since this is no longer
+      # supported by the Docker API:
+      # https://github.com/docker/hub-feedback/issues/1927
+      #
+      # - name: Docker Hub Description
+      #   uses: peter-evans/dockerhub-description@v2.1.0
+      #   env:
+      #     DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      #     DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      #     DOCKERHUB_REPOSITORY: nickblah/postgis

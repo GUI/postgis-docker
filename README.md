@@ -7,26 +7,26 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 ## Supported Tags and Respective Dockerfile Links
 
 - PostgreSQL 12
-  - PostGIS 3: [`12.1-postgis-3.0.0`, `12.1-postgis-3.0`, `12.1-postgis-3`, `12-postgis-3.0.0`, `12-postgis-3.0`, `12-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`12.1-postgis-2.5.3`, `12.1-postgis-2.5`, `12.1-postgis-2`, `12-postgis-2.5.3`, `12-postgis-2.5`, `12-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-2.5/Dockerfile)
+  - PostGIS 3: [`12.2-postgis-3.0.0`, `12.2-postgis-3.0`, `12.2-postgis-3`, `12-postgis-3.0.0`, `12-postgis-3.0`, `12-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`12.2-postgis-2.5.3`, `12.2-postgis-2.5`, `12.2-postgis-2`, `12-postgis-2.5.3`, `12-postgis-2.5`, `12-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-2.5/Dockerfile)
 - PostgreSQL 11
-  - PostGIS 3: [`11.6-postgis-3.0.0`, `11.6-postgis-3.0`, `11.6-postgis-3`, `11-postgis-3.0.0`, `11-postgis-3.0`, `11-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/11/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`11.6-postgis-2.5.3`, `11.6-postgis-2.5`, `11.6-postgis-2`, `11-postgis-2.5.3`, `11-postgis-2.5`, `11-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/11/postgis-2.5/Dockerfile)
+  - PostGIS 3: [`11.7-postgis-3.0.0`, `11.7-postgis-3.0`, `11.7-postgis-3`, `11-postgis-3.0.0`, `11-postgis-3.0`, `11-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/11/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`11.7-postgis-2.5.3`, `11.7-postgis-2.5`, `11.7-postgis-2`, `11-postgis-2.5.3`, `11-postgis-2.5`, `11-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/11/postgis-2.5/Dockerfile)
 - PostgreSQL 10
-  - PostGIS 3: [`10.11-postgis-3.0.0`, `10.11-postgis-3.0`, `10.11-postgis-3`, `10-postgis-3.0.0`, `10-postgis-3.0`, `10-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`10.11-postgis-2.5.3`, `10.11-postgis-2.5`, `10.11-postgis-2`, `10-postgis-2.5.3`, `10-postgis-2.5`, `10-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-2.5/Dockerfile)
-  - PostGIS 2.4: [`10.11-postgis-2.4.4`, `10.11-postgis-2.4`, `10-postgis-2.4.4`, `10-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-2.4/Dockerfile)
+  - PostGIS 3: [`10.12-postgis-3.0.0`, `10.12-postgis-3.0`, `10.12-postgis-3`, `10-postgis-3.0.0`, `10-postgis-3.0`, `10-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`10.12-postgis-2.5.3`, `10.12-postgis-2.5`, `10.12-postgis-2`, `10-postgis-2.5.3`, `10-postgis-2.5`, `10-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-2.5/Dockerfile)
+  - PostGIS 2.4: [`10.12-postgis-2.4.4`, `10.12-postgis-2.4`, `10-postgis-2.4.4`, `10-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/10/postgis-2.4/Dockerfile)
 - PostgreSQL 9
-  - PostGIS 3: [`9.6.16-postgis-3.0.0`, `9.6.16-postgis-3.0`, `9.6.16-postgis-3`, `9.6-postgis-3.0.0`, `9.6-postgis-3.0`, `9.6-postgis-3`, `9-postgis-3.0.0`, `9-postgis-3.0`, `9-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`9.6.16-postgis-2.5.3`, `9.6.16-postgis-2.5`, `9.6.16-postgis-2`, `9.6-postgis-2.5.3`, `9.6-postgis-2.5`, `9.6-postgis-2`, `9-postgis-2.5.3`, `9-postgis-2.5`, `9-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.5/Dockerfile)
-  - PostGIS 2.4: [`9.6.16-postgis-2.4.4`, `9.6.16-postgis-2.4`, `9.6-postgis-2.4.4`, `9.6-postgis-2.4`, `9-postgis-2.4.4`, `9-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.4/Dockerfile)
-  - PostGIS 2.3: [`9.6.16-postgis-2.3.3`, `9.6.16-postgis-2.3`, `9.6-postgis-2.3.3`, `9.6-postgis-2.3`, `9-postgis-2.3.3`, `9-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.3/Dockerfile)
+  - PostGIS 3: [`9.6.17-postgis-3.0.0`, `9.6.17-postgis-3.0`, `9.6.17-postgis-3`, `9.6-postgis-3.0.0`, `9.6-postgis-3.0`, `9.6-postgis-3`, `9-postgis-3.0.0`, `9-postgis-3.0`, `9-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`9.6.17-postgis-2.5.3`, `9.6.17-postgis-2.5`, `9.6.17-postgis-2`, `9.6-postgis-2.5.3`, `9.6-postgis-2.5`, `9.6-postgis-2`, `9-postgis-2.5.3`, `9-postgis-2.5`, `9-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.5/Dockerfile)
+  - PostGIS 2.4: [`9.6.17-postgis-2.4.4`, `9.6.17-postgis-2.4`, `9.6-postgis-2.4.4`, `9.6-postgis-2.4`, `9-postgis-2.4.4`, `9-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.4/Dockerfile)
+  - PostGIS 2.3: [`9.6.17-postgis-2.3.3`, `9.6.17-postgis-2.3`, `9.6-postgis-2.3.3`, `9.6-postgis-2.3`, `9-postgis-2.3.3`, `9-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.6/postgis-2.3/Dockerfile)
 - PostgreSQL 9.5
-  - PostGIS 3: [`9.5.20-postgis-3.0.0`, `9.5.20-postgis-3.0`, `9.5.20-postgis-3`, `9.5-postgis-3.0.0`, `9.5-postgis-3.0`, `9.5-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`9.5.20-postgis-2.5.3`, `9.5.20-postgis-2.5`, `9.5.20-postgis-2`, `9.5-postgis-2.5.3`, `9.5-postgis-2.5`, `9.5-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.5/Dockerfile)
-  - PostGIS 2.4: [`9.5.20-postgis-2.4.4`, `9.5.20-postgis-2.4`, `9.5-postgis-2.4.4`, `9.5-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.4/Dockerfile)
-  - PostGIS 2.3: [`9.5.20-postgis-2.3.3`, `9.5.20-postgis-2.3`, `9.5-postgis-2.3.3`, `9.5-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.3/Dockerfile)
+  - PostGIS 3: [`9.5.21-postgis-3.0.0`, `9.5.21-postgis-3.0`, `9.5.21-postgis-3`, `9.5-postgis-3.0.0`, `9.5-postgis-3.0`, `9.5-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`9.5.21-postgis-2.5.3`, `9.5.21-postgis-2.5`, `9.5.21-postgis-2`, `9.5-postgis-2.5.3`, `9.5-postgis-2.5`, `9.5-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.5/Dockerfile)
+  - PostGIS 2.4: [`9.5.21-postgis-2.4.4`, `9.5.21-postgis-2.4`, `9.5-postgis-2.4.4`, `9.5-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.4/Dockerfile)
+  - PostGIS 2.3: [`9.5.21-postgis-2.3.3`, `9.5.21-postgis-2.3`, `9.5-postgis-2.3.3`, `9.5-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.3/Dockerfile)
 - PostgreSQL 9.4
-  - PostGIS 2.5: [`9.4.25-postgis-2.5.3`, `9.4.25-postgis-2.5`, `9.4.25-postgis-2`, `9.4-postgis-2.5.3`, `9.4-postgis-2.5`, `9.4-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.5/Dockerfile)
-  - PostGIS 2.4: [`9.4.25-postgis-2.4.4`, `9.4.25-postgis-2.4`, `9.4-postgis-2.4.4`, `9.4-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.4/Dockerfile)
-  - PostGIS 2.3: [`9.4.25-postgis-2.3.3`, `9.4.25-postgis-2.3`, `9.4-postgis-2.3.3`, `9.4-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.3/Dockerfile)
+  - PostGIS 2.5: [`9.4.26-postgis-2.5.3`, `9.4.26-postgis-2.5`, `9.4.26-postgis-2`, `9.4-postgis-2.5.3`, `9.4-postgis-2.5`, `9.4-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.5/Dockerfile)
+  - PostGIS 2.4: [`9.4.26-postgis-2.4.4`, `9.4.26-postgis-2.4`, `9.4-postgis-2.4.4`, `9.4-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.4/Dockerfile)
+  - PostGIS 2.3: [`9.4.26-postgis-2.3.3`, `9.4.26-postgis-2.3`, `9.4-postgis-2.3.3`, `9.4-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.3/Dockerfile)

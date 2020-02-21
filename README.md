@@ -26,7 +26,3 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
   - PostGIS 2.5: [`9.5.21-postgis-2.5.3`, `9.5.21-postgis-2.5`, `9.5.21-postgis-2`, `9.5-postgis-2.5.3`, `9.5-postgis-2.5`, `9.5-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.5/Dockerfile)
   - PostGIS 2.4: [`9.5.21-postgis-2.4.4`, `9.5.21-postgis-2.4`, `9.5-postgis-2.4.4`, `9.5-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.4/Dockerfile)
   - PostGIS 2.3: [`9.5.21-postgis-2.3.3`, `9.5.21-postgis-2.3`, `9.5-postgis-2.3.3`, `9.5-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.5/postgis-2.3/Dockerfile)
-- PostgreSQL 9.4
-  - PostGIS 2.5: [`9.4.26-postgis-2.5.3`, `9.4.26-postgis-2.5`, `9.4.26-postgis-2`, `9.4-postgis-2.5.3`, `9.4-postgis-2.5`, `9.4-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.5/Dockerfile)
-  - PostGIS 2.4: [`9.4.26-postgis-2.4.4`, `9.4.26-postgis-2.4`, `9.4-postgis-2.4.4`, `9.4-postgis-2.4`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.4/Dockerfile)
-  - PostGIS 2.3: [`9.4.26-postgis-2.3.3`, `9.4.26-postgis-2.3`, `9.4-postgis-2.3.3`, `9.4-postgis-2.3`](https://github.com/GUI/postgis-docker/blob/master/9.4/postgis-2.3/Dockerfile)

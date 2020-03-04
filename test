@@ -16,8 +16,8 @@ set -Eeuo pipefail
       echo
     fi
 
-    printf "12.2-postgis-2.5.3: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:12.2-postgis-2.5.3 2>&1 || true)
+    printf "12.2-postgis-2.5.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:12.2-postgis-2.5.4 2>&1 || true)
     if [[ $output =~ "PostGIS Tests: Error" ]]; then
       echo "Error"
       echo $output
@@ -44,8 +44,8 @@ set -Eeuo pipefail
       echo
     fi
 
-    printf "11.7-postgis-2.5.3: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:11.7-postgis-2.5.3 2>&1 || true)
+    printf "11.7-postgis-2.5.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:11.7-postgis-2.5.4 2>&1 || true)
     if [[ $output =~ "PostGIS Tests: Error" ]]; then
       echo "Error"
       echo $output
@@ -72,8 +72,8 @@ set -Eeuo pipefail
       echo
     fi
 
-    printf "10.12-postgis-2.5.3: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:10.12-postgis-2.5.3 2>&1 || true)
+    printf "10.12-postgis-2.5.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:10.12-postgis-2.5.4 2>&1 || true)
     if [[ $output =~ "PostGIS Tests: Error" ]]; then
       echo "Error"
       echo $output
@@ -114,8 +114,8 @@ set -Eeuo pipefail
       echo
     fi
 
-    printf "9.6.17-postgis-2.5.3: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:9.6.17-postgis-2.5.3 2>&1 || true)
+    printf "9.6.17-postgis-2.5.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:9.6.17-postgis-2.5.4 2>&1 || true)
     if [[ $output =~ "PostGIS Tests: Error" ]]; then
       echo "Error"
       echo $output
@@ -170,8 +170,8 @@ set -Eeuo pipefail
       echo
     fi
 
-    printf "9.5.21-postgis-2.5.3: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:9.5.21-postgis-2.5.3 2>&1 || true)
+    printf "9.5.21-postgis-2.5.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh --rm nickblah/postgis:9.5.21-postgis-2.5.4 2>&1 || true)
     if [[ $output =~ "PostGIS Tests: Error" ]]; then
       echo "Error"
       echo $output

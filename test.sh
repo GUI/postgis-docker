@@ -12,6 +12,7 @@ if [ "$extension_count" = "1" ]; then
   echo "PostGIS Tests: OK"
 else
   echo "PostGIS Tests: Error"
+  exit 1
 fi
 
 pg_ctl -D "$PGDATA" stop

@@ -10,7 +10,7 @@ docker_image = "nickblah/postgis"
 all_postgis_tags = []
 versions = {}
 
-library = open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
+library = URI.open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
   .read
   .split(/[\r\n]{2,}/)
   .select { |lines| lines.include?("Tags:") }

@@ -6,6 +6,8 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 ## Supported Tags and Respective Dockerfile Links
 
+- PostgreSQL 13
+  - PostGIS 3: [`13-beta2-postgis-3.0.1`, `13-beta2-postgis-3.0`, `13-beta2-postgis-3`, `13-postgis-3.0.1`, `13-postgis-3.0`, `13-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/13/postgis-3/Dockerfile)
 - PostgreSQL 12
   - PostGIS 3: [`12.3-postgis-3.0.1`, `12.3-postgis-3.0`, `12.3-postgis-3`, `12-postgis-3.0.1`, `12-postgis-3.0`, `12-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-3/Dockerfile)
   - PostGIS 2.5: [`12.3-postgis-2.5.4`, `12.3-postgis-2.5`, `12.3-postgis-2`, `12-postgis-2.5.4`, `12-postgis-2.5`, `12-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-2.5/Dockerfile)

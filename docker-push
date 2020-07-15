@@ -2,6 +2,12 @@
 
 set -Eeuxo pipefail
 
+      docker push 'nickblah/postgis:13-beta2-postgis-3.0.1'
+      docker push 'nickblah/postgis:13-beta2-postgis-3.0'
+      docker push 'nickblah/postgis:13-beta2-postgis-3'
+      docker push 'nickblah/postgis:13-postgis-3.0.1'
+      docker push 'nickblah/postgis:13-postgis-3.0'
+      docker push 'nickblah/postgis:13-postgis-3'
       docker push 'nickblah/postgis:12.3-postgis-3.0.1'
       docker push 'nickblah/postgis:12.3-postgis-3.0'
       docker push 'nickblah/postgis:12.3-postgis-3'

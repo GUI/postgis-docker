@@ -1,7 +1,7 @@
 FROM postgres:9.5.22
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.0.1+dfsg-2.pgdg90+1
+  POSTGIS_VERSION=3.0.1+dfsg-4.pgdg90+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

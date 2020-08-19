@@ -3,8 +3,8 @@
 set -Eeuo pipefail
 exitcode=0
 
-    printf "13-beta3-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-beta3-postgis-3.0.1 2>&1 || true)
+    printf "13-beta3-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-beta3-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -19,8 +19,8 @@ exitcode=0
       echo
     fi
 
-    printf "12.4-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:12.4-postgis-3.0.1 2>&1 || true)
+    printf "13-beta3-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-beta3-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -35,8 +35,8 @@ exitcode=0
       echo
     fi
 
-    printf "12.4-postgis-2.5.4: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:12.4-postgis-2.5.4 2>&1 || true)
+    printf "12.4-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:12.4-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -51,8 +51,8 @@ exitcode=0
       echo
     fi
 
-    printf "11.9-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.9-postgis-3.0.1 2>&1 || true)
+    printf "12.4-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:12.4-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -67,8 +67,8 @@ exitcode=0
       echo
     fi
 
-    printf "11.9-postgis-2.5.4: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.9-postgis-2.5.4 2>&1 || true)
+    printf "11.9-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.9-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -83,8 +83,8 @@ exitcode=0
       echo
     fi
 
-    printf "10.14-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.14-postgis-3.0.1 2>&1 || true)
+    printf "11.9-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.9-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -99,8 +99,24 @@ exitcode=0
       echo
     fi
 
-    printf "10.14-postgis-2.5.4: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.14-postgis-2.5.4 2>&1 || true)
+    printf "10.14-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.14-postgis-3.0.2 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "10.14-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.14-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -131,8 +147,8 @@ exitcode=0
       echo
     fi
 
-    printf "9.6.19-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.19-postgis-3.0.1 2>&1 || true)
+    printf "9.6.19-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.19-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -147,8 +163,8 @@ exitcode=0
       echo
     fi
 
-    printf "9.6.19-postgis-2.5.4: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.19-postgis-2.5.4 2>&1 || true)
+    printf "9.6.19-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.19-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -195,8 +211,8 @@ exitcode=0
       echo
     fi
 
-    printf "9.5.23-postgis-3.0.1: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.5.23-postgis-3.0.1 2>&1 || true)
+    printf "9.5.23-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.5.23-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -211,8 +227,8 @@ exitcode=0
       echo
     fi
 
-    printf "9.5.23-postgis-2.5.4: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.5.23-postgis-2.5.4 2>&1 || true)
+    printf "9.5.23-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.5.23-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

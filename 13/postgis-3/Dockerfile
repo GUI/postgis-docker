@@ -1,4 +1,4 @@
-FROM postgres:13-beta3
+FROM postgres:13-rc1
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.0.2+dfsg-2.pgdg100+1

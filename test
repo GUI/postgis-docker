@@ -3,8 +3,8 @@
 set -Eeuo pipefail
 exitcode=0
 
-    printf "13-beta3-postgis-3.0.2: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-beta3-postgis-3.0.2 2>&1 || true)
+    printf "13-rc1-postgis-3.0.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-rc1-postgis-3.0.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -19,8 +19,8 @@ exitcode=0
       echo
     fi
 
-    printf "13-beta3-postgis-2.5.5: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-beta3-postgis-2.5.5 2>&1 || true)
+    printf "13-rc1-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:13-rc1-postgis-2.5.5 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

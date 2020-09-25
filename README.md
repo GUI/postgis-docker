@@ -7,10 +7,10 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 ## Supported Tags and Respective Dockerfile Links
 
 - PostgreSQL 13
-  - PostGIS 3: [`13-rc1-postgis-3.0.2`, `13-rc1-postgis-3.0`, `13-rc1-postgis-3`, `13-postgis-3.0.2`, `13-postgis-3.0`, `13-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/13/postgis-3/Dockerfile)
-  - PostGIS 2.5: [`13-rc1-postgis-2.5.5`, `13-rc1-postgis-2.5`, `13-rc1-postgis-2`, `13-postgis-2.5.5`, `13-postgis-2.5`, `13-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/13/postgis-2.5/Dockerfile)
+  - PostGIS 3: [`13.0-postgis-3.0.2`, `13.0-postgis-3.0`, `13.0-postgis-3`, `13-postgis-3.0.2`, `13-postgis-3.0`, `13-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/13/postgis-3/Dockerfile)
+  - PostGIS 2.5: [`13.0-postgis-2.5.5`, `13.0-postgis-2.5`, `13.0-postgis-2`, `13-postgis-2.5.5`, `13-postgis-2.5`, `13-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/13/postgis-2.5/Dockerfile)
 - PostgreSQL 12
-  - PostGIS 3: [`12.4-postgis-3.0.2`, `12.4-postgis-3.0`, `12.4-postgis-3`, `12-postgis-3.0.2`, `12-postgis-3.0`, `12-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-3/Dockerfile)
+  - PostGIS 3: [`12.4-postgis-3.0.2`, `12.4-postgis-3.0`, `12.4-postgis-3`, `12-postgis-3.0.2`, `12-postgis-3.0`, `12-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-3/Dockerfile)
   - PostGIS 2.5: [`12.4-postgis-2.5.5`, `12.4-postgis-2.5`, `12.4-postgis-2`, `12-postgis-2.5.5`, `12-postgis-2.5`, `12-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/12/postgis-2.5/Dockerfile)
 - PostgreSQL 11
   - PostGIS 3: [`11.9-postgis-3.0.2`, `11.9-postgis-3.0`, `11.9-postgis-3`, `11-postgis-3.0.2`, `11-postgis-3.0`, `11-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/11/postgis-3/Dockerfile)

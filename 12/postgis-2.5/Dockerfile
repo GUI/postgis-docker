@@ -1,4 +1,4 @@
-FROM postgres:12.5
+FROM postgres:12.6
 
 ENV POSTGIS_MAJOR=2.5 \
   POSTGIS_VERSION=2.5.5+dfsg-1.pgdg100+2

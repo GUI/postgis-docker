@@ -1,4 +1,4 @@
-FROM postgres:9.5.24
+FROM postgres:9.5.25
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.0.3+dfsg-2.pgdg90+1

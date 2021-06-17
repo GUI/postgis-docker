@@ -67,6 +67,38 @@ exitcode=0
       echo
     fi
 
+    printf "11.12-buster-postgis-3.1.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.12-buster-postgis-3.1.2 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "11.12-buster-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.12-buster-postgis-2.5.5 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
     printf "11.12-postgis-3.1.2: "
     output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.12-postgis-3.1.2 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
@@ -85,6 +117,54 @@ exitcode=0
 
     printf "11.12-postgis-2.5.5: "
     output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:11.12-postgis-2.5.5 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "10.17-buster-postgis-3.1.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.17-buster-postgis-3.1.2 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "10.17-buster-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.17-buster-postgis-2.5.5 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "10.17-buster-postgis-2.4.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.17-buster-postgis-2.4.4 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -133,6 +213,54 @@ exitcode=0
 
     printf "10.17-postgis-2.4.4: "
     output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:10.17-postgis-2.4.4 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "9.6.22-buster-postgis-3.1.2: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.22-buster-postgis-3.1.2 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "9.6.22-buster-postgis-2.5.5: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.22-buster-postgis-2.5.5 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "9.6.22-buster-postgis-2.4.4: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm nickblah/postgis:9.6.22-buster-postgis-2.4.4 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

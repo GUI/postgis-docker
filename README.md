@@ -6,6 +6,8 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 ## Supported Tags and Respective Dockerfile Links
 
+- PostgreSQL 14beta2
+  - PostGIS 3: [`14beta2-postgis-3.1.2`, `14beta2-postgis-3.1`, `14beta2-postgis-3`, `14beta2-buster-postgis-3.1.2`, `14beta2-buster-postgis-3.1`, `14beta2-buster-postgis-3`](https://github.com/GUI/postgis-docker/blob/master/14/buster/postgis-3/Dockerfile)
 - PostgreSQL 13
   - PostGIS 3: [`13.3-postgis-3.1.2`, `13.3-postgis-3.1`, `13.3-postgis-3`, `13-postgis-3.1.2`, `13-postgis-3.1`, `13-postgis-3`, `13.3-buster-postgis-3.1.2`, `13.3-buster-postgis-3.1`, `13.3-buster-postgis-3`, `13-buster-postgis-3.1.2`, `13-buster-postgis-3.1`, `13-buster-postgis-3`, `buster-postgis-3.1.2`, `buster-postgis-3.1`, `buster-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/master/13/buster/postgis-3/Dockerfile)
   - PostGIS 2.5: [`13.3-postgis-2.5.5`, `13.3-postgis-2.5`, `13.3-postgis-2`, `13-postgis-2.5.5`, `13-postgis-2.5`, `13-postgis-2`, `13.3-buster-postgis-2.5.5`, `13.3-buster-postgis-2.5`, `13.3-buster-postgis-2`, `13-buster-postgis-2.5.5`, `13-buster-postgis-2.5`, `13-buster-postgis-2`, `buster-postgis-2.5.5`, `buster-postgis-2.5`, `buster-postgis-2`](https://github.com/GUI/postgis-docker/blob/master/13/buster/postgis-2.5/Dockerfile)

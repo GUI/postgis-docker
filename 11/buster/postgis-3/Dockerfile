@@ -1,4 +1,4 @@
-FROM postgres:11.12-buster
+FROM postgres:11.13-buster
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.1.2+dfsg-1~exp2.pgdg100+1

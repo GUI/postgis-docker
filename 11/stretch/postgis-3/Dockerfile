@@ -1,4 +1,4 @@
-FROM postgres:11.12-stretch
+FROM postgres:11.13-stretch
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.1.2+dfsg-1~exp2.pgdg90+1

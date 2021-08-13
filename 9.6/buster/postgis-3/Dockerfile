@@ -1,4 +1,4 @@
-FROM postgres:9.6.22-buster
+FROM postgres:9.6.23-buster
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.1.2+dfsg-1~exp2.pgdg100+1

@@ -1,7 +1,7 @@
-FROM postgres:9.6.23-buster
+FROM postgres:13.4-bullseye
 
-ENV POSTGIS_MAJOR=2.4 \
-  POSTGIS_VERSION=2.4.4+dfsg-4.pgdg100+1
+ENV POSTGIS_MAJOR=3 \
+  POSTGIS_VERSION=3.1.4+dfsg-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

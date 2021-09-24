@@ -1,7 +1,7 @@
-FROM postgres:11.13-buster
+FROM postgres:10.18-bullseye
 
-ENV POSTGIS_MAJOR=2.5 \
-  POSTGIS_VERSION=2.5.5+dfsg-1.pgdg100+2
+ENV POSTGIS_MAJOR=3 \
+  POSTGIS_VERSION=3.1.4+dfsg-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

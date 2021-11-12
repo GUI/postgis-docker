@@ -1,4 +1,4 @@
-FROM postgres:9.6.23-stretch
+FROM postgres:9.6.24-stretch
 
 ENV POSTGIS_MAJOR=2.3 \
   POSTGIS_VERSION=2.3.3+dfsg-1.pgdg90+1

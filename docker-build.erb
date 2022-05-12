@@ -10,7 +10,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from '<%= "type=registry,ref=#{docker_image}:build-cache-#{data.fetch(:postgis_tag)}" %>' \
       --cache-to '<%= "type=registry,ref=#{docker_image}:build-cache-#{data.fetch(:postgis_tag)},mode=max" %>' \
-      --tag '<%= "localhost:5000/#{docker_image}:build-cache-#{data.fetch(:postgis_tag)}" %>' \
+      --tag '<%= "localhost:5000/#{docker_image}:#{data.fetch(:postgis_tag)}" %>' \
       --file <%= data.fetch(:filename) %> \
       .
   <%- end -%>

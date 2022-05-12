@@ -33,7 +33,7 @@ library.each do |postgres|
       postgis_major = postgis_package.fetch("Package").split("-postgis-", 2).last
       postgis_version = postgis_package.fetch("Version").match(/^(((\d+)\.\d+)\.\d+)/)
 
-      template = ERB.new(File.read("Dockerfile.erb"), nil, "-").result_with_hash({
+      template = ERB.new(File.read("Dockerfile.erb"), trim_mode: "-").result_with_hash({
         :postgres_tag => postgres_tag,
         :postgis_major => postgis_major,
         :postgis_version => postgis_package.fetch("Version"),
@@ -68,28 +68,28 @@ library.each do |postgres|
   end
 end
 
-template = ERB.new(File.read("docker-build.erb"), nil, "-").result_with_hash({
+template = ERB.new(File.read("docker-build.erb"), trim_mode: "-").result_with_hash({
   :docker_image => docker_image,
   :versions => versions,
 })
 File.open("docker-build", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-build")
 
-template = ERB.new(File.read("docker-push.erb"), nil, "-").result_with_hash({
+template = ERB.new(File.read("docker-push.erb"), trim_mode: "-").result_with_hash({
   :docker_image => docker_image,
   :versions => versions,
 })
 File.open("docker-push", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-push")
 
-template = ERB.new(File.read("test.erb"), nil, "-").result_with_hash({
+template = ERB.new(File.read("test.erb"), trim_mode: "-").result_with_hash({
   :docker_image => docker_image,
   :versions => versions,
 })
 File.open("test", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "test")
 
-template = ERB.new(File.read("README.md.erb"), nil, "-").result_with_hash({
+template = ERB.new(File.read("README.md.erb"), trim_mode: "-").result_with_hash({
   :versions => versions,
 })
 File.open("README.md", "w") { |f| f.write(template) }

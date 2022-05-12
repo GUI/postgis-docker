@@ -3,7 +3,7 @@
 set -Eeuxo pipefail
 
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.2-postgis-3.2.1' \
@@ -12,7 +12,7 @@ set -Eeuxo pipefail
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.6-postgis-3.2.1' \
@@ -21,7 +21,7 @@ set -Eeuxo pipefail
       --file 13/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.10-postgis-3.2.1' \
@@ -30,7 +30,7 @@ set -Eeuxo pipefail
       --file 12/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1' \
@@ -39,7 +39,7 @@ set -Eeuxo pipefail
       --file 11/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-3.2.1' \
@@ -48,7 +48,7 @@ set -Eeuxo pipefail
       --file 11/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-2.5.5' \
@@ -57,7 +57,7 @@ set -Eeuxo pipefail
       --file 11/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1' \
@@ -66,7 +66,7 @@ set -Eeuxo pipefail
       --file 10/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-3.2.1' \
@@ -75,7 +75,7 @@ set -Eeuxo pipefail
       --file 10/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.5.5' \
@@ -84,7 +84,7 @@ set -Eeuxo pipefail
       --file 10/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
-      --platform "linux/amd64,linux/arm64" \
+      --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.4.4' \

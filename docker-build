@@ -8,7 +8,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.2-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-14.2-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-14.2-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' \
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -17,7 +17,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.6-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-13.6-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-13.6-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' \
       --file 13/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -26,7 +26,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.10-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-12.10-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-12.10-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' \
       --file 12/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -35,7 +35,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' \
       --file 11/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -44,7 +44,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-11.15-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' \
       --file 11/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -53,7 +53,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-2.5.5' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-2.5.5,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-11.15-postgis-2.5.5' \
+      --tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' \
       --file 11/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
@@ -62,7 +62,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' \
       --file 10/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -71,7 +71,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-3.2.1' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-10.20-postgis-3.2.1' \
+      --tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' \
       --file 10/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
@@ -80,7 +80,7 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.5.5' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.5.5,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-10.20-postgis-2.5.5' \
+      --tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' \
       --file 10/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
@@ -89,6 +89,6 @@ set -Eeuxo pipefail
       --push \
       --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.4.4' \
       --cache-to 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.4.4,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:build-cache-10.20-postgis-2.4.4' \
+      --tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' \
       --file 10/stretch/postgis-2.4/Dockerfile \
       .

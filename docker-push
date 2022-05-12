@@ -2,219 +2,73 @@
 
 set -Eeuxo pipefail
 
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-postgis-3.2.1'
-      docker push 'nickblah/postgis:14.2-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-postgis-3.2'
-      docker push 'nickblah/postgis:14.2-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-postgis-3'
-      docker push 'nickblah/postgis:14.2-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-postgis-3.2.1'
-      docker push 'nickblah/postgis:14-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-postgis-3.2'
-      docker push 'nickblah/postgis:14-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-postgis-3'
-      docker push 'nickblah/postgis:14-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:14.2-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:14.2-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14.2-bullseye-postgis-3'
-      docker push 'nickblah/postgis:14.2-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:14-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:14-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:14-bullseye-postgis-3'
-      docker push 'nickblah/postgis:14-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:bullseye-postgis-3'
-      docker push 'nickblah/postgis:bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:14.2-postgis-3.2.1' 'nickblah/postgis:latest'
-      docker push 'nickblah/postgis:latest'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-postgis-3.2.1'
-      docker push 'nickblah/postgis:13.6-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-postgis-3.2'
-      docker push 'nickblah/postgis:13.6-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-postgis-3'
-      docker push 'nickblah/postgis:13.6-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-postgis-3.2.1'
-      docker push 'nickblah/postgis:13-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-postgis-3.2'
-      docker push 'nickblah/postgis:13-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-postgis-3'
-      docker push 'nickblah/postgis:13-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:13.6-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:13.6-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13.6-bullseye-postgis-3'
-      docker push 'nickblah/postgis:13.6-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:13-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:13-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:13.6-postgis-3.2.1' 'nickblah/postgis:13-bullseye-postgis-3'
-      docker push 'nickblah/postgis:13-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-postgis-3.2.1'
-      docker push 'nickblah/postgis:12.10-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-postgis-3.2'
-      docker push 'nickblah/postgis:12.10-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-postgis-3'
-      docker push 'nickblah/postgis:12.10-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-postgis-3.2.1'
-      docker push 'nickblah/postgis:12-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-postgis-3.2'
-      docker push 'nickblah/postgis:12-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-postgis-3'
-      docker push 'nickblah/postgis:12-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:12.10-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:12.10-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12.10-bullseye-postgis-3'
-      docker push 'nickblah/postgis:12.10-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:12-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:12-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:12.10-postgis-3.2.1' 'nickblah/postgis:12-bullseye-postgis-3'
-      docker push 'nickblah/postgis:12-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11.15-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:11.15-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11.15-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:11.15-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11.15-bullseye-postgis-3'
-      docker push 'nickblah/postgis:11.15-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:11-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:11-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-bullseye-postgis-3.2.1' 'nickblah/postgis:11-bullseye-postgis-3'
-      docker push 'nickblah/postgis:11-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-postgis-3.2.1'
-      docker push 'nickblah/postgis:11.15-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-postgis-3.2'
-      docker push 'nickblah/postgis:11.15-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-postgis-3'
-      docker push 'nickblah/postgis:11.15-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-postgis-3.2.1'
-      docker push 'nickblah/postgis:11-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-postgis-3.2'
-      docker push 'nickblah/postgis:11-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-postgis-3'
-      docker push 'nickblah/postgis:11-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-stretch-postgis-3.2.1'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-stretch-postgis-3.2'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11.15-stretch-postgis-3'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-stretch-postgis-3.2.1'
-      docker push 'nickblah/postgis:11-stretch-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-stretch-postgis-3.2'
-      docker push 'nickblah/postgis:11-stretch-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-3.2.1' 'nickblah/postgis:11-stretch-postgis-3'
-      docker push 'nickblah/postgis:11-stretch-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-postgis-2.5.5'
-      docker push 'nickblah/postgis:11.15-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-postgis-2.5'
-      docker push 'nickblah/postgis:11.15-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-postgis-2'
-      docker push 'nickblah/postgis:11.15-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-postgis-2.5.5'
-      docker push 'nickblah/postgis:11-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-postgis-2.5'
-      docker push 'nickblah/postgis:11-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-postgis-2'
-      docker push 'nickblah/postgis:11-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-stretch-postgis-2.5.5'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-stretch-postgis-2.5'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11.15-stretch-postgis-2'
-      docker push 'nickblah/postgis:11.15-stretch-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-stretch-postgis-2.5.5'
-      docker push 'nickblah/postgis:11-stretch-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-stretch-postgis-2.5'
-      docker push 'nickblah/postgis:11-stretch-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:11.15-postgis-2.5.5' 'nickblah/postgis:11-stretch-postgis-2'
-      docker push 'nickblah/postgis:11-stretch-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10.20-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:10.20-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10.20-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:10.20-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10.20-bullseye-postgis-3'
-      docker push 'nickblah/postgis:10.20-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10-bullseye-postgis-3.2.1'
-      docker push 'nickblah/postgis:10-bullseye-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10-bullseye-postgis-3.2'
-      docker push 'nickblah/postgis:10-bullseye-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-bullseye-postgis-3.2.1' 'nickblah/postgis:10-bullseye-postgis-3'
-      docker push 'nickblah/postgis:10-bullseye-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-postgis-3.2.1'
-      docker push 'nickblah/postgis:10.20-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-postgis-3.2'
-      docker push 'nickblah/postgis:10.20-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-postgis-3'
-      docker push 'nickblah/postgis:10.20-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-postgis-3.2.1'
-      docker push 'nickblah/postgis:10-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-postgis-3.2'
-      docker push 'nickblah/postgis:10-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-postgis-3'
-      docker push 'nickblah/postgis:10-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-stretch-postgis-3.2.1'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-stretch-postgis-3.2'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10.20-stretch-postgis-3'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-stretch-postgis-3.2.1'
-      docker push 'nickblah/postgis:10-stretch-postgis-3.2.1'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-stretch-postgis-3.2'
-      docker push 'nickblah/postgis:10-stretch-postgis-3.2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-3.2.1' 'nickblah/postgis:10-stretch-postgis-3'
-      docker push 'nickblah/postgis:10-stretch-postgis-3'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-postgis-2.5.5'
-      docker push 'nickblah/postgis:10.20-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-postgis-2.5'
-      docker push 'nickblah/postgis:10.20-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-postgis-2'
-      docker push 'nickblah/postgis:10.20-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-postgis-2.5.5'
-      docker push 'nickblah/postgis:10-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-postgis-2.5'
-      docker push 'nickblah/postgis:10-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-postgis-2'
-      docker push 'nickblah/postgis:10-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-stretch-postgis-2.5.5'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-stretch-postgis-2.5'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10.20-stretch-postgis-2'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-stretch-postgis-2.5.5'
-      docker push 'nickblah/postgis:10-stretch-postgis-2.5.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-stretch-postgis-2.5'
-      docker push 'nickblah/postgis:10-stretch-postgis-2.5'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.5.5' 'nickblah/postgis:10-stretch-postgis-2'
-      docker push 'nickblah/postgis:10-stretch-postgis-2'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10.20-postgis-2.4.4'
-      docker push 'nickblah/postgis:10.20-postgis-2.4.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10.20-postgis-2.4'
-      docker push 'nickblah/postgis:10.20-postgis-2.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10-postgis-2.4.4'
-      docker push 'nickblah/postgis:10-postgis-2.4.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10-postgis-2.4'
-      docker push 'nickblah/postgis:10-postgis-2.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10.20-stretch-postgis-2.4.4'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-2.4.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10.20-stretch-postgis-2.4'
-      docker push 'nickblah/postgis:10.20-stretch-postgis-2.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10-stretch-postgis-2.4.4'
-      docker push 'nickblah/postgis:10-stretch-postgis-2.4.4'
-      docker tag 'localhost:5000/nickblah/postgis:10.20-postgis-2.4.4' 'nickblah/postgis:10-stretch-postgis-2.4'
-      docker push 'nickblah/postgis:10-stretch-postgis-2.4'
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.2-postgis-3.2.1' \
+      --tag 'nickblah/postgis:14.2-postgis-3.2.1' --tag 'nickblah/postgis:14.2-postgis-3.2' --tag 'nickblah/postgis:14.2-postgis-3' --tag 'nickblah/postgis:14-postgis-3.2.1' --tag 'nickblah/postgis:14-postgis-3.2' --tag 'nickblah/postgis:14-postgis-3' --tag 'nickblah/postgis:14.2-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14.2-bullseye-postgis-3.2' --tag 'nickblah/postgis:14.2-bullseye-postgis-3' --tag 'nickblah/postgis:14-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14-bullseye-postgis-3.2' --tag 'nickblah/postgis:14-bullseye-postgis-3' --tag 'nickblah/postgis:bullseye-postgis-3.2.1' --tag 'nickblah/postgis:bullseye-postgis-3.2' --tag 'nickblah/postgis:bullseye-postgis-3' --tag 'nickblah/postgis:latest' \
+      --file 14/bullseye/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.6-postgis-3.2.1' \
+      --tag 'nickblah/postgis:13.6-postgis-3.2.1' --tag 'nickblah/postgis:13.6-postgis-3.2' --tag 'nickblah/postgis:13.6-postgis-3' --tag 'nickblah/postgis:13-postgis-3.2.1' --tag 'nickblah/postgis:13-postgis-3.2' --tag 'nickblah/postgis:13-postgis-3' --tag 'nickblah/postgis:13.6-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13.6-bullseye-postgis-3.2' --tag 'nickblah/postgis:13.6-bullseye-postgis-3' --tag 'nickblah/postgis:13-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13-bullseye-postgis-3.2' --tag 'nickblah/postgis:13-bullseye-postgis-3' \
+      --file 13/bullseye/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.10-postgis-3.2.1' \
+      --tag 'nickblah/postgis:12.10-postgis-3.2.1' --tag 'nickblah/postgis:12.10-postgis-3.2' --tag 'nickblah/postgis:12.10-postgis-3' --tag 'nickblah/postgis:12-postgis-3.2.1' --tag 'nickblah/postgis:12-postgis-3.2' --tag 'nickblah/postgis:12-postgis-3' --tag 'nickblah/postgis:12.10-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12.10-bullseye-postgis-3.2' --tag 'nickblah/postgis:12.10-bullseye-postgis-3' --tag 'nickblah/postgis:12-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12-bullseye-postgis-3.2' --tag 'nickblah/postgis:12-bullseye-postgis-3' \
+      --file 12/bullseye/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1' \
+      --tag 'nickblah/postgis:11.15-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11.15-bullseye-postgis-3.2' --tag 'nickblah/postgis:11.15-bullseye-postgis-3' --tag 'nickblah/postgis:11-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11-bullseye-postgis-3.2' --tag 'nickblah/postgis:11-bullseye-postgis-3' \
+      --file 11/bullseye/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-3.2.1' \
+      --tag 'nickblah/postgis:11.15-postgis-3.2.1' --tag 'nickblah/postgis:11.15-postgis-3.2' --tag 'nickblah/postgis:11.15-postgis-3' --tag 'nickblah/postgis:11-postgis-3.2.1' --tag 'nickblah/postgis:11-postgis-3.2' --tag 'nickblah/postgis:11-postgis-3' --tag 'nickblah/postgis:11.15-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11.15-stretch-postgis-3.2' --tag 'nickblah/postgis:11.15-stretch-postgis-3' --tag 'nickblah/postgis:11-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11-stretch-postgis-3.2' --tag 'nickblah/postgis:11-stretch-postgis-3' \
+      --file 11/stretch/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-2.5.5' \
+      --tag 'nickblah/postgis:11.15-postgis-2.5.5' --tag 'nickblah/postgis:11.15-postgis-2.5' --tag 'nickblah/postgis:11.15-postgis-2' --tag 'nickblah/postgis:11-postgis-2.5.5' --tag 'nickblah/postgis:11-postgis-2.5' --tag 'nickblah/postgis:11-postgis-2' --tag 'nickblah/postgis:11.15-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11.15-stretch-postgis-2.5' --tag 'nickblah/postgis:11.15-stretch-postgis-2' --tag 'nickblah/postgis:11-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11-stretch-postgis-2.5' --tag 'nickblah/postgis:11-stretch-postgis-2' \
+      --file 11/stretch/postgis-2.5/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1' \
+      --tag 'nickblah/postgis:10.20-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10.20-bullseye-postgis-3.2' --tag 'nickblah/postgis:10.20-bullseye-postgis-3' --tag 'nickblah/postgis:10-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10-bullseye-postgis-3.2' --tag 'nickblah/postgis:10-bullseye-postgis-3' \
+      --file 10/bullseye/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-3.2.1' \
+      --tag 'nickblah/postgis:10.20-postgis-3.2.1' --tag 'nickblah/postgis:10.20-postgis-3.2' --tag 'nickblah/postgis:10.20-postgis-3' --tag 'nickblah/postgis:10-postgis-3.2.1' --tag 'nickblah/postgis:10-postgis-3.2' --tag 'nickblah/postgis:10-postgis-3' --tag 'nickblah/postgis:10.20-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10.20-stretch-postgis-3.2' --tag 'nickblah/postgis:10.20-stretch-postgis-3' --tag 'nickblah/postgis:10-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10-stretch-postgis-3.2' --tag 'nickblah/postgis:10-stretch-postgis-3' \
+      --file 10/stretch/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.5.5' \
+      --tag 'nickblah/postgis:10.20-postgis-2.5.5' --tag 'nickblah/postgis:10.20-postgis-2.5' --tag 'nickblah/postgis:10.20-postgis-2' --tag 'nickblah/postgis:10-postgis-2.5.5' --tag 'nickblah/postgis:10-postgis-2.5' --tag 'nickblah/postgis:10-postgis-2' --tag 'nickblah/postgis:10.20-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10.20-stretch-postgis-2.5' --tag 'nickblah/postgis:10.20-stretch-postgis-2' --tag 'nickblah/postgis:10-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10-stretch-postgis-2.5' --tag 'nickblah/postgis:10-stretch-postgis-2' \
+      --file 10/stretch/postgis-2.5/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64' \
+      --push \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.4.4' \
+      --tag 'nickblah/postgis:10.20-postgis-2.4.4' --tag 'nickblah/postgis:10.20-postgis-2.4' --tag 'nickblah/postgis:10-postgis-2.4.4' --tag 'nickblah/postgis:10-postgis-2.4' --tag 'nickblah/postgis:10.20-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10.20-stretch-postgis-2.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4' \
+      --file 10/stretch/postgis-2.4/Dockerfile \
+      .

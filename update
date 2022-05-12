@@ -58,11 +58,18 @@ library.each do |postgres|
       FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, "w") { |f| f.write(template) }
 
+      platforms = ["linux/amd64"]
+      # No ARM packages for postgis available for stretch.
+      if postgres.fetch("Directory") != "stretch"
+        platforms << "linux/arm64"
+      end
+
       versions[postgres_version] ||= {}
       versions[postgres_version][postgis_major] = {
         :postgis_tag => postgis_tags.first,
         :postgis_tags => postgis_tags,
         :filename => filename,
+        :platforms => platforms,
       }
     end
   end

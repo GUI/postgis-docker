@@ -1,4 +1,4 @@
-FROM postgres:13.6-bullseye
+FROM postgres:13.7-bullseye
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.2.1+dfsg-1.pgdg110+1

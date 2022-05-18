@@ -5,70 +5,70 @@ set -Eeuxo pipefail
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.2-postgis-3.2.1' \
-      --tag 'nickblah/postgis:14.2-postgis-3.2.1' --tag 'nickblah/postgis:14.2-postgis-3.2' --tag 'nickblah/postgis:14.2-postgis-3' --tag 'nickblah/postgis:14-postgis-3.2.1' --tag 'nickblah/postgis:14-postgis-3.2' --tag 'nickblah/postgis:14-postgis-3' --tag 'nickblah/postgis:14.2-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14.2-bullseye-postgis-3.2' --tag 'nickblah/postgis:14.2-bullseye-postgis-3' --tag 'nickblah/postgis:14-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14-bullseye-postgis-3.2' --tag 'nickblah/postgis:14-bullseye-postgis-3' --tag 'nickblah/postgis:bullseye-postgis-3.2.1' --tag 'nickblah/postgis:bullseye-postgis-3.2' --tag 'nickblah/postgis:bullseye-postgis-3' --tag 'nickblah/postgis:latest' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.3-postgis-3.2.1' \
+      --tag 'nickblah/postgis:14.3-postgis-3.2.1' --tag 'nickblah/postgis:14.3-postgis-3.2' --tag 'nickblah/postgis:14.3-postgis-3' --tag 'nickblah/postgis:14-postgis-3.2.1' --tag 'nickblah/postgis:14-postgis-3.2' --tag 'nickblah/postgis:14-postgis-3' --tag 'nickblah/postgis:14.3-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14.3-bullseye-postgis-3.2' --tag 'nickblah/postgis:14.3-bullseye-postgis-3' --tag 'nickblah/postgis:14-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:14-bullseye-postgis-3.2' --tag 'nickblah/postgis:14-bullseye-postgis-3' --tag 'nickblah/postgis:bullseye-postgis-3.2.1' --tag 'nickblah/postgis:bullseye-postgis-3.2' --tag 'nickblah/postgis:bullseye-postgis-3' --tag 'nickblah/postgis:latest' \
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.6-postgis-3.2.1' \
-      --tag 'nickblah/postgis:13.6-postgis-3.2.1' --tag 'nickblah/postgis:13.6-postgis-3.2' --tag 'nickblah/postgis:13.6-postgis-3' --tag 'nickblah/postgis:13-postgis-3.2.1' --tag 'nickblah/postgis:13-postgis-3.2' --tag 'nickblah/postgis:13-postgis-3' --tag 'nickblah/postgis:13.6-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13.6-bullseye-postgis-3.2' --tag 'nickblah/postgis:13.6-bullseye-postgis-3' --tag 'nickblah/postgis:13-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13-bullseye-postgis-3.2' --tag 'nickblah/postgis:13-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.7-postgis-3.2.1' \
+      --tag 'nickblah/postgis:13.7-postgis-3.2.1' --tag 'nickblah/postgis:13.7-postgis-3.2' --tag 'nickblah/postgis:13.7-postgis-3' --tag 'nickblah/postgis:13-postgis-3.2.1' --tag 'nickblah/postgis:13-postgis-3.2' --tag 'nickblah/postgis:13-postgis-3' --tag 'nickblah/postgis:13.7-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13.7-bullseye-postgis-3.2' --tag 'nickblah/postgis:13.7-bullseye-postgis-3' --tag 'nickblah/postgis:13-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:13-bullseye-postgis-3.2' --tag 'nickblah/postgis:13-bullseye-postgis-3' \
       --file 13/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.10-postgis-3.2.1' \
-      --tag 'nickblah/postgis:12.10-postgis-3.2.1' --tag 'nickblah/postgis:12.10-postgis-3.2' --tag 'nickblah/postgis:12.10-postgis-3' --tag 'nickblah/postgis:12-postgis-3.2.1' --tag 'nickblah/postgis:12-postgis-3.2' --tag 'nickblah/postgis:12-postgis-3' --tag 'nickblah/postgis:12.10-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12.10-bullseye-postgis-3.2' --tag 'nickblah/postgis:12.10-bullseye-postgis-3' --tag 'nickblah/postgis:12-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12-bullseye-postgis-3.2' --tag 'nickblah/postgis:12-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.11-postgis-3.2.1' \
+      --tag 'nickblah/postgis:12.11-postgis-3.2.1' --tag 'nickblah/postgis:12.11-postgis-3.2' --tag 'nickblah/postgis:12.11-postgis-3' --tag 'nickblah/postgis:12-postgis-3.2.1' --tag 'nickblah/postgis:12-postgis-3.2' --tag 'nickblah/postgis:12-postgis-3' --tag 'nickblah/postgis:12.11-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12.11-bullseye-postgis-3.2' --tag 'nickblah/postgis:12.11-bullseye-postgis-3' --tag 'nickblah/postgis:12-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:12-bullseye-postgis-3.2' --tag 'nickblah/postgis:12-bullseye-postgis-3' \
       --file 12/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-bullseye-postgis-3.2.1' \
-      --tag 'nickblah/postgis:11.15-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11.15-bullseye-postgis-3.2' --tag 'nickblah/postgis:11.15-bullseye-postgis-3' --tag 'nickblah/postgis:11-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11-bullseye-postgis-3.2' --tag 'nickblah/postgis:11-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.16-bullseye-postgis-3.2.1' \
+      --tag 'nickblah/postgis:11.16-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11.16-bullseye-postgis-3.2' --tag 'nickblah/postgis:11.16-bullseye-postgis-3' --tag 'nickblah/postgis:11-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:11-bullseye-postgis-3.2' --tag 'nickblah/postgis:11-bullseye-postgis-3' \
       --file 11/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-3.2.1' \
-      --tag 'nickblah/postgis:11.15-postgis-3.2.1' --tag 'nickblah/postgis:11.15-postgis-3.2' --tag 'nickblah/postgis:11.15-postgis-3' --tag 'nickblah/postgis:11-postgis-3.2.1' --tag 'nickblah/postgis:11-postgis-3.2' --tag 'nickblah/postgis:11-postgis-3' --tag 'nickblah/postgis:11.15-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11.15-stretch-postgis-3.2' --tag 'nickblah/postgis:11.15-stretch-postgis-3' --tag 'nickblah/postgis:11-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11-stretch-postgis-3.2' --tag 'nickblah/postgis:11-stretch-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.16-postgis-3.2.1' \
+      --tag 'nickblah/postgis:11.16-postgis-3.2.1' --tag 'nickblah/postgis:11.16-postgis-3.2' --tag 'nickblah/postgis:11.16-postgis-3' --tag 'nickblah/postgis:11-postgis-3.2.1' --tag 'nickblah/postgis:11-postgis-3.2' --tag 'nickblah/postgis:11-postgis-3' --tag 'nickblah/postgis:11.16-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11.16-stretch-postgis-3.2' --tag 'nickblah/postgis:11.16-stretch-postgis-3' --tag 'nickblah/postgis:11-stretch-postgis-3.2.1' --tag 'nickblah/postgis:11-stretch-postgis-3.2' --tag 'nickblah/postgis:11-stretch-postgis-3' \
       --file 11/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.15-postgis-2.5.5' \
-      --tag 'nickblah/postgis:11.15-postgis-2.5.5' --tag 'nickblah/postgis:11.15-postgis-2.5' --tag 'nickblah/postgis:11.15-postgis-2' --tag 'nickblah/postgis:11-postgis-2.5.5' --tag 'nickblah/postgis:11-postgis-2.5' --tag 'nickblah/postgis:11-postgis-2' --tag 'nickblah/postgis:11.15-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11.15-stretch-postgis-2.5' --tag 'nickblah/postgis:11.15-stretch-postgis-2' --tag 'nickblah/postgis:11-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11-stretch-postgis-2.5' --tag 'nickblah/postgis:11-stretch-postgis-2' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.16-postgis-2.5.5' \
+      --tag 'nickblah/postgis:11.16-postgis-2.5.5' --tag 'nickblah/postgis:11.16-postgis-2.5' --tag 'nickblah/postgis:11.16-postgis-2' --tag 'nickblah/postgis:11-postgis-2.5.5' --tag 'nickblah/postgis:11-postgis-2.5' --tag 'nickblah/postgis:11-postgis-2' --tag 'nickblah/postgis:11.16-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11.16-stretch-postgis-2.5' --tag 'nickblah/postgis:11.16-stretch-postgis-2' --tag 'nickblah/postgis:11-stretch-postgis-2.5.5' --tag 'nickblah/postgis:11-stretch-postgis-2.5' --tag 'nickblah/postgis:11-stretch-postgis-2' \
       --file 11/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-bullseye-postgis-3.2.1' \
-      --tag 'nickblah/postgis:10.20-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10.20-bullseye-postgis-3.2' --tag 'nickblah/postgis:10.20-bullseye-postgis-3' --tag 'nickblah/postgis:10-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10-bullseye-postgis-3.2' --tag 'nickblah/postgis:10-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.21-bullseye-postgis-3.2.1' \
+      --tag 'nickblah/postgis:10.21-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10.21-bullseye-postgis-3.2' --tag 'nickblah/postgis:10.21-bullseye-postgis-3' --tag 'nickblah/postgis:10-bullseye-postgis-3.2.1' --tag 'nickblah/postgis:10-bullseye-postgis-3.2' --tag 'nickblah/postgis:10-bullseye-postgis-3' \
       --file 10/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-3.2.1' \
-      --tag 'nickblah/postgis:10.20-postgis-3.2.1' --tag 'nickblah/postgis:10.20-postgis-3.2' --tag 'nickblah/postgis:10.20-postgis-3' --tag 'nickblah/postgis:10-postgis-3.2.1' --tag 'nickblah/postgis:10-postgis-3.2' --tag 'nickblah/postgis:10-postgis-3' --tag 'nickblah/postgis:10.20-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10.20-stretch-postgis-3.2' --tag 'nickblah/postgis:10.20-stretch-postgis-3' --tag 'nickblah/postgis:10-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10-stretch-postgis-3.2' --tag 'nickblah/postgis:10-stretch-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.21-postgis-3.2.1' \
+      --tag 'nickblah/postgis:10.21-postgis-3.2.1' --tag 'nickblah/postgis:10.21-postgis-3.2' --tag 'nickblah/postgis:10.21-postgis-3' --tag 'nickblah/postgis:10-postgis-3.2.1' --tag 'nickblah/postgis:10-postgis-3.2' --tag 'nickblah/postgis:10-postgis-3' --tag 'nickblah/postgis:10.21-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10.21-stretch-postgis-3.2' --tag 'nickblah/postgis:10.21-stretch-postgis-3' --tag 'nickblah/postgis:10-stretch-postgis-3.2.1' --tag 'nickblah/postgis:10-stretch-postgis-3.2' --tag 'nickblah/postgis:10-stretch-postgis-3' \
       --file 10/stretch/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.5.5' \
-      --tag 'nickblah/postgis:10.20-postgis-2.5.5' --tag 'nickblah/postgis:10.20-postgis-2.5' --tag 'nickblah/postgis:10.20-postgis-2' --tag 'nickblah/postgis:10-postgis-2.5.5' --tag 'nickblah/postgis:10-postgis-2.5' --tag 'nickblah/postgis:10-postgis-2' --tag 'nickblah/postgis:10.20-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10.20-stretch-postgis-2.5' --tag 'nickblah/postgis:10.20-stretch-postgis-2' --tag 'nickblah/postgis:10-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10-stretch-postgis-2.5' --tag 'nickblah/postgis:10-stretch-postgis-2' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.21-postgis-2.5.5' \
+      --tag 'nickblah/postgis:10.21-postgis-2.5.5' --tag 'nickblah/postgis:10.21-postgis-2.5' --tag 'nickblah/postgis:10.21-postgis-2' --tag 'nickblah/postgis:10-postgis-2.5.5' --tag 'nickblah/postgis:10-postgis-2.5' --tag 'nickblah/postgis:10-postgis-2' --tag 'nickblah/postgis:10.21-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10.21-stretch-postgis-2.5' --tag 'nickblah/postgis:10.21-stretch-postgis-2' --tag 'nickblah/postgis:10-stretch-postgis-2.5.5' --tag 'nickblah/postgis:10-stretch-postgis-2.5' --tag 'nickblah/postgis:10-stretch-postgis-2' \
       --file 10/stretch/postgis-2.5/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.20-postgis-2.4.4' \
-      --tag 'nickblah/postgis:10.20-postgis-2.4.4' --tag 'nickblah/postgis:10.20-postgis-2.4' --tag 'nickblah/postgis:10-postgis-2.4.4' --tag 'nickblah/postgis:10-postgis-2.4' --tag 'nickblah/postgis:10.20-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10.20-stretch-postgis-2.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-10.21-postgis-2.4.4' \
+      --tag 'nickblah/postgis:10.21-postgis-2.4.4' --tag 'nickblah/postgis:10.21-postgis-2.4' --tag 'nickblah/postgis:10-postgis-2.4.4' --tag 'nickblah/postgis:10-postgis-2.4' --tag 'nickblah/postgis:10.21-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10.21-stretch-postgis-2.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4.4' --tag 'nickblah/postgis:10-stretch-postgis-2.4' \
       --file 10/stretch/postgis-2.4/Dockerfile \
       .

@@ -6,9 +6,9 @@ set -Eeuxo pipefail
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.3-postgis-3.2.1' \
-      --cache-to 'type=registry,ref=nickblah/postgis:build-cache-14.3-postgis-3.2.1,mode=max' \
-      --tag 'localhost:5000/nickblah/postgis:14.3-postgis-3.2.1' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.4-postgis-3.2.1' \
+      --cache-to 'type=registry,ref=nickblah/postgis:build-cache-14.4-postgis-3.2.1,mode=max' \
+      --tag 'localhost:5000/nickblah/postgis:14.4-postgis-3.2.1' \
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \

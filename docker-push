@@ -5,36 +5,36 @@ set -Eeuxo pipefail
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-15beta3-postgis-3.2.3' \
-      --tag 'nickblah/postgis:15beta3-postgis-3.2.3' --tag 'nickblah/postgis:15beta3-postgis-3.2' --tag 'nickblah/postgis:15beta3-postgis-3' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3.2.3' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3.2' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-15beta3-postgis-3.3.1' \
+      --tag 'nickblah/postgis:15beta3-postgis-3.3.1' --tag 'nickblah/postgis:15beta3-postgis-3.3' --tag 'nickblah/postgis:15beta3-postgis-3' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3.3' --tag 'nickblah/postgis:15beta3-bullseye-postgis-3' \
       --file 15/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.5-postgis-3.3.0' \
-      --tag 'nickblah/postgis:14.5-postgis-3.3.0' --tag 'nickblah/postgis:14.5-postgis-3.3' --tag 'nickblah/postgis:14.5-postgis-3' --tag 'nickblah/postgis:14-postgis-3.3.0' --tag 'nickblah/postgis:14-postgis-3.3' --tag 'nickblah/postgis:14-postgis-3' --tag 'nickblah/postgis:14.5-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:14.5-bullseye-postgis-3.3' --tag 'nickblah/postgis:14.5-bullseye-postgis-3' --tag 'nickblah/postgis:14-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:14-bullseye-postgis-3.3' --tag 'nickblah/postgis:14-bullseye-postgis-3' --tag 'nickblah/postgis:bullseye-postgis-3.3.0' --tag 'nickblah/postgis:bullseye-postgis-3.3' --tag 'nickblah/postgis:bullseye-postgis-3' --tag 'nickblah/postgis:latest' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-14.5-postgis-3.3.1' \
+      --tag 'nickblah/postgis:14.5-postgis-3.3.1' --tag 'nickblah/postgis:14.5-postgis-3.3' --tag 'nickblah/postgis:14.5-postgis-3' --tag 'nickblah/postgis:14-postgis-3.3.1' --tag 'nickblah/postgis:14-postgis-3.3' --tag 'nickblah/postgis:14-postgis-3' --tag 'nickblah/postgis:14.5-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:14.5-bullseye-postgis-3.3' --tag 'nickblah/postgis:14.5-bullseye-postgis-3' --tag 'nickblah/postgis:14-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:14-bullseye-postgis-3.3' --tag 'nickblah/postgis:14-bullseye-postgis-3' --tag 'nickblah/postgis:bullseye-postgis-3.3.1' --tag 'nickblah/postgis:bullseye-postgis-3.3' --tag 'nickblah/postgis:bullseye-postgis-3' --tag 'nickblah/postgis:latest' \
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.8-postgis-3.3.0' \
-      --tag 'nickblah/postgis:13.8-postgis-3.3.0' --tag 'nickblah/postgis:13.8-postgis-3.3' --tag 'nickblah/postgis:13.8-postgis-3' --tag 'nickblah/postgis:13-postgis-3.3.0' --tag 'nickblah/postgis:13-postgis-3.3' --tag 'nickblah/postgis:13-postgis-3' --tag 'nickblah/postgis:13.8-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:13.8-bullseye-postgis-3.3' --tag 'nickblah/postgis:13.8-bullseye-postgis-3' --tag 'nickblah/postgis:13-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:13-bullseye-postgis-3.3' --tag 'nickblah/postgis:13-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-13.8-postgis-3.3.1' \
+      --tag 'nickblah/postgis:13.8-postgis-3.3.1' --tag 'nickblah/postgis:13.8-postgis-3.3' --tag 'nickblah/postgis:13.8-postgis-3' --tag 'nickblah/postgis:13-postgis-3.3.1' --tag 'nickblah/postgis:13-postgis-3.3' --tag 'nickblah/postgis:13-postgis-3' --tag 'nickblah/postgis:13.8-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:13.8-bullseye-postgis-3.3' --tag 'nickblah/postgis:13.8-bullseye-postgis-3' --tag 'nickblah/postgis:13-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:13-bullseye-postgis-3.3' --tag 'nickblah/postgis:13-bullseye-postgis-3' \
       --file 13/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.12-postgis-3.3.0' \
-      --tag 'nickblah/postgis:12.12-postgis-3.3.0' --tag 'nickblah/postgis:12.12-postgis-3.3' --tag 'nickblah/postgis:12.12-postgis-3' --tag 'nickblah/postgis:12-postgis-3.3.0' --tag 'nickblah/postgis:12-postgis-3.3' --tag 'nickblah/postgis:12-postgis-3' --tag 'nickblah/postgis:12.12-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:12.12-bullseye-postgis-3.3' --tag 'nickblah/postgis:12.12-bullseye-postgis-3' --tag 'nickblah/postgis:12-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:12-bullseye-postgis-3.3' --tag 'nickblah/postgis:12-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-12.12-postgis-3.3.1' \
+      --tag 'nickblah/postgis:12.12-postgis-3.3.1' --tag 'nickblah/postgis:12.12-postgis-3.3' --tag 'nickblah/postgis:12.12-postgis-3' --tag 'nickblah/postgis:12-postgis-3.3.1' --tag 'nickblah/postgis:12-postgis-3.3' --tag 'nickblah/postgis:12-postgis-3' --tag 'nickblah/postgis:12.12-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:12.12-bullseye-postgis-3.3' --tag 'nickblah/postgis:12.12-bullseye-postgis-3' --tag 'nickblah/postgis:12-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:12-bullseye-postgis-3.3' --tag 'nickblah/postgis:12-bullseye-postgis-3' \
       --file 12/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.17-bullseye-postgis-3.3.0' \
-      --tag 'nickblah/postgis:11.17-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:11.17-bullseye-postgis-3.3' --tag 'nickblah/postgis:11.17-bullseye-postgis-3' --tag 'nickblah/postgis:11-bullseye-postgis-3.3.0' --tag 'nickblah/postgis:11-bullseye-postgis-3.3' --tag 'nickblah/postgis:11-bullseye-postgis-3' \
+      --cache-from 'type=registry,ref=nickblah/postgis:build-cache-11.17-bullseye-postgis-3.3.1' \
+      --tag 'nickblah/postgis:11.17-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:11.17-bullseye-postgis-3.3' --tag 'nickblah/postgis:11.17-bullseye-postgis-3' --tag 'nickblah/postgis:11-bullseye-postgis-3.3.1' --tag 'nickblah/postgis:11-bullseye-postgis-3.3' --tag 'nickblah/postgis:11-bullseye-postgis-3' \
       --file 11/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \

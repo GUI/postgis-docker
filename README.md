@@ -6,8 +6,8 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 ## Supported Tags and Respective Dockerfile Links
 
-- PostgreSQL 15beta3
-  - PostGIS 3: [`15beta3-postgis-3.3.1`, `15beta3-postgis-3.3`, `15beta3-postgis-3`, `15beta3-bullseye-postgis-3.3.1`, `15beta3-bullseye-postgis-3.3`, `15beta3-bullseye-postgis-3`](https://github.com/GUI/postgis-docker/blob/main/15/bullseye/postgis-3/Dockerfile)
+- PostgreSQL 15beta4
+  - PostGIS 3: [`15beta4-postgis-3.3.1`, `15beta4-postgis-3.3`, `15beta4-postgis-3`, `15beta4-bullseye-postgis-3.3.1`, `15beta4-bullseye-postgis-3.3`, `15beta4-bullseye-postgis-3`](https://github.com/GUI/postgis-docker/blob/main/15/bullseye/postgis-3/Dockerfile)
 - PostgreSQL 14
   - PostGIS 3: [`14.5-postgis-3.3.1`, `14.5-postgis-3.3`, `14.5-postgis-3`, `14-postgis-3.3.1`, `14-postgis-3.3`, `14-postgis-3`, `14.5-bullseye-postgis-3.3.1`, `14.5-bullseye-postgis-3.3`, `14.5-bullseye-postgis-3`, `14-bullseye-postgis-3.3.1`, `14-bullseye-postgis-3.3`, `14-bullseye-postgis-3`, `bullseye-postgis-3.3.1`, `bullseye-postgis-3.3`, `bullseye-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/main/14/bullseye/postgis-3/Dockerfile)
 - PostgreSQL 13

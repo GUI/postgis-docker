@@ -6,10 +6,10 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 ## Supported Tags and Respective Dockerfile Links
 
-- PostgreSQL 15rc2
-  - PostGIS 3: [`15rc2-postgis-3.3.1`, `15rc2-postgis-3.3`, `15rc2-postgis-3`, `15rc2-bullseye-postgis-3.3.1`, `15rc2-bullseye-postgis-3.3`, `15rc2-bullseye-postgis-3`](https://github.com/GUI/postgis-docker/blob/main/15/bullseye/postgis-3/Dockerfile)
+- PostgreSQL 15
+  - PostGIS 3: [`15.0-postgis-3.3.1`, `15.0-postgis-3.3`, `15.0-postgis-3`, `15-postgis-3.3.1`, `15-postgis-3.3`, `15-postgis-3`, `15.0-bullseye-postgis-3.3.1`, `15.0-bullseye-postgis-3.3`, `15.0-bullseye-postgis-3`, `15-bullseye-postgis-3.3.1`, `15-bullseye-postgis-3.3`, `15-bullseye-postgis-3`, `bullseye-postgis-3.3.1`, `bullseye-postgis-3.3`, `bullseye-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/main/15/bullseye/postgis-3/Dockerfile)
 - PostgreSQL 14
-  - PostGIS 3: [`14.5-postgis-3.3.1`, `14.5-postgis-3.3`, `14.5-postgis-3`, `14-postgis-3.3.1`, `14-postgis-3.3`, `14-postgis-3`, `14.5-bullseye-postgis-3.3.1`, `14.5-bullseye-postgis-3.3`, `14.5-bullseye-postgis-3`, `14-bullseye-postgis-3.3.1`, `14-bullseye-postgis-3.3`, `14-bullseye-postgis-3`, `bullseye-postgis-3.3.1`, `bullseye-postgis-3.3`, `bullseye-postgis-3`, `latest`](https://github.com/GUI/postgis-docker/blob/main/14/bullseye/postgis-3/Dockerfile)
+  - PostGIS 3: [`14.5-postgis-3.3.1`, `14.5-postgis-3.3`, `14.5-postgis-3`, `14-postgis-3.3.1`, `14-postgis-3.3`, `14-postgis-3`, `14.5-bullseye-postgis-3.3.1`, `14.5-bullseye-postgis-3.3`, `14.5-bullseye-postgis-3`, `14-bullseye-postgis-3.3.1`, `14-bullseye-postgis-3.3`, `14-bullseye-postgis-3`](https://github.com/GUI/postgis-docker/blob/main/14/bullseye/postgis-3/Dockerfile)
 - PostgreSQL 13
   - PostGIS 3: [`13.8-postgis-3.3.1`, `13.8-postgis-3.3`, `13.8-postgis-3`, `13-postgis-3.3.1`, `13-postgis-3.3`, `13-postgis-3`, `13.8-bullseye-postgis-3.3.1`, `13.8-bullseye-postgis-3.3`, `13.8-bullseye-postgis-3`, `13-bullseye-postgis-3.3.1`, `13-bullseye-postgis-3.3`, `13-bullseye-postgis-3`](https://github.com/GUI/postgis-docker/blob/main/13/bullseye/postgis-3/Dockerfile)
 - PostgreSQL 12

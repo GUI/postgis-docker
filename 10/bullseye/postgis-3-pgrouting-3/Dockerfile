@@ -1,18 +1,18 @@
-FROM postgres:<%= postgres_tag %>
+FROM postgres:10.22-bullseye
 
-ENV POSTGIS_MAJOR=<%= postgis_major %> \
-  POSTGIS_VERSION=<%= postgis_version %><%- if pgrouting_version -%> \
-  PGROUTING_MAJOR=<%= pgrouting_major %> \
-  PGROUTING_VERSION=<%= pgrouting_version %><%- end %>
+ENV POSTGIS_MAJOR=3 \
+  POSTGIS_VERSION=3.2.3+dfsg-1.pgdg110+1 \
+  PGROUTING_MAJOR=3 \
+  PGROUTING_VERSION=3.3.1-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \
   apt-get install -y --no-install-recommends \
     postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR=$POSTGIS_VERSION \
     postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR-scripts=$POSTGIS_VERSION \
-    postgis<%- if pgrouting_version -%> \
+    postgis \
     postgresql-$PG_MAJOR-pgrouting=$PGROUTING_VERSION \
-    postgresql-$PG_MAJOR-pgrouting-scripts=$PGROUTING_VERSION<%- end -%> && \
+    postgresql-$PG_MAJOR-pgrouting-scripts=$PGROUTING_VERSION && \
   rm -rf /var/lib/apt/lists/*
 
 LABEL org.opencontainers.image.source="https://github.com/GUI/postgis-docker" \

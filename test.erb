@@ -3,10 +3,10 @@
 set -Eeuo pipefail
 exitcode=0
 
-<%- versions.each do |postgresql_version, postgis_versions| -%>
-  <%- postgis_versions.each do |postgis_version, data| -%>
-    printf "<%= data.fetch(:postgis_tag) %>: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm '<%= "localhost:5000/#{docker_image}:#{data.fetch(:postgis_tag)}" %>' 2>&1 || true)
+<%- versions.each do |postgresql_version, variant_versions| -%>
+  <%- variant_versions.each do |data| -%>
+    printf "<%= data.fetch(:variant_tag) %>: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm '<%= "localhost:5000/#{data.fetch(:build_cache_tag)}" %>' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

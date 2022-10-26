@@ -6,9 +6,22 @@ require "open-uri"
 
 FileUtils.rm_rf(Dir.glob("[0-9]*"))
 
-docker_image = "nickblah/postgis"
-all_postgis_tags = []
+github_postgis_image = "ghcr.io/gui/postgis"
+github_pgrouting_image = "ghcr.io/gui/pgrouting"
+docker_hub_postgis_image = "nickblah/postgis"
+docker_hub_pgrouting_image = "nickblah/pgrouting"
+
+all_variant_tags = []
 versions = {}
+
+def parse_apt_packages(output)
+  output
+    .split(/[\r\n]{2,}/)
+    .select { |lines| lines.include?("Package:") }
+    .map { |lines| Hash[lines.split(/[\r\n]/).map { |r| r.split(/:\s+/, 2) }] }
+    .sort_by { |package| package.fetch("Version") }
+    .reverse
+end
 
 library = URI.open("https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres")
   .read
@@ -23,38 +36,70 @@ library.each do |postgres|
 
   if !postgres.fetch("Directory").include?("alpine")
     system("docker", "pull", "postgres:#{postgres_tag}")
-    postgis_packages = `docker run --rm postgres:#{postgres_tag} sh -c 'apt-get update && apt-cache search --full --names-only "^postgresql-$PG_MAJOR-postgis-[0-9\.]+$"'`
-      .split(/[\r\n]{2,}/)
-      .select { |lines| lines.include?("Package:") }
-      .map { |lines| Hash[lines.split(/[\r\n]/).map { |r| r.split(/:\s+/, 2) }] }
-      .sort_by { |package| package.fetch("Version") }
-      .reverse
-    postgis_packages.each_with_index do |postgis_package, postgis_index|
-      postgis_major = postgis_package.fetch("Package").split("-postgis-", 2).last
-      postgis_version = postgis_package.fetch("Version").match(/^(((\d+)\.\d+)\.\d+)/)
 
-      template = ERB.new(File.read("Dockerfile.erb"), trim_mode: "-").result_with_hash({
-        :postgres_tag => postgres_tag,
-        :postgis_major => postgis_major,
-        :postgis_version => postgis_package.fetch("Version"),
-      })
+    postgis_packages = parse_apt_packages(`docker run --rm postgres:#{postgres_tag} sh -c 'apt-get update && apt-cache search --full --names-only "^postgresql-$PG_MAJOR-postgis-[0-9\.]+$"'`)
 
-      postgis_tags = postgres_version_tags.map do |postgres_tag|
+    pgrouting_packages = parse_apt_packages(`docker run --rm postgres:#{postgres_tag} sh -c 'apt-get update && apt-cache search --full --names-only "^postgresql-$PG_MAJOR-pgrouting(-[0-9\.]+)?$"'`)
+
+    variants = []
+    variant = {
+      :postgres_tag => postgres_tag,
+      :postgis_major => nil,
+      :postgis_version => nil,
+      :pgrouting_major => nil,
+      :pgrouting_version => nil,
+    }
+    postgis_packages.each do |postgis_package|
+      variant[:postgis_major] = postgis_package.fetch("Package").split("-postgis-", 2).last
+      variant[:postgis_version] = postgis_package.fetch("Version")
+      variant[:postgis_version_parts] = variant.fetch(:postgis_version).match(/^(((\d+)\.\d+)\.\d+)/)
+
+      variants << variant
+
+      pgrouting_packages.each do |pgrouting_package|
+        pgrouting_variant = variant.dup
+        pgrouting_variant[:pgrouting_version] = pgrouting_package.fetch("Version")
+        pgrouting_variant[:pgrouting_version_parts] = pgrouting_variant.fetch(:pgrouting_version).match(/^(((\d+)\.\d+)\.\d+)/)
+        pgrouting_variant[:pgrouting_major] = pgrouting_variant.fetch(:pgrouting_version).to_i.to_s
+
+        variants << pgrouting_variant
+      end
+    end
+
+    variants.each_with_index do |variant, variant_index|
+      template = ERB.new(File.read("Dockerfile.erb"), trim_mode: "-").result_with_hash(variant)
+
+      variant_tags = postgres_version_tags.map do |postgres_tag|
         tags = [
-          "#{postgres_tag}-postgis-#{postgis_version[1]}",
-          "#{postgres_tag}-postgis-#{postgis_version[2]}",
-          "#{postgres_tag}-postgis-#{postgis_version[3]}",
+          "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[1]}",
+          "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[2]}",
+          "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[3]}",
         ]
+
+        if variant.fetch(:pgrouting_version)
+          tags += [
+            "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[1]}-pgrouting-#{variant.fetch(:pgrouting_version_parts)[1]}",
+            "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[2]}-pgrouting-#{variant.fetch(:pgrouting_version_parts)[1]}",
+            "#{postgres_tag}-postgis-#{variant.fetch(:postgis_version_parts)[3]}-pgrouting-#{variant.fetch(:pgrouting_version_parts)[1]}",
+          ]
+        end
+
+        tags
       end.flatten.uniq
 
-      if postgres_tags.include?("latest") && postgis_index == 0
-        postgis_tags << "latest"
+      if postgres_tags.include?("latest") && variant_index == 0
+        variant_tags << "latest"
       end
 
-      postgis_tags -= all_postgis_tags
-      all_postgis_tags += postgis_tags
+      variant_tags -= all_variant_tags
+      all_variant_tags += variant_tags
 
-      filename = File.join(postgres.fetch("Directory"), "postgis-#{postgis_major}", "Dockerfile")
+      dir = "postgis-#{variant.fetch(:postgis_major)}"
+      if variant.fetch(:pgrouting_version)
+        dir += "-pgrouting-#{variant.fetch(:pgrouting_major)}"
+      end
+
+      filename = File.join(postgres.fetch("Directory"), dir, "Dockerfile")
       FileUtils.mkdir_p(File.dirname(filename))
       File.open(filename, "w") { |f| f.write(template) }
 
@@ -64,10 +109,36 @@ library.each do |postgres|
         platforms << "linux/arm64"
       end
 
-      versions[postgres_version] ||= {}
-      versions[postgres_version][postgis_major] = {
-        :postgis_tag => postgis_tags.first,
-        :postgis_tags => postgis_tags,
+      docker_image_tags = variant_tags.map do |tag|
+        if variant.fetch(:pgrouting_major)
+          [
+            "#{github_pgrouting_image}:#{tag}",
+            "#{docker_hub_pgrouting_image}:#{tag}",
+          ]
+        else
+          [
+            "#{github_postgis_image}:#{tag}",
+            "#{docker_hub_postgis_image}:#{tag}",
+          ]
+        end
+      end.flatten
+
+      variant_tag = variant_tags.first
+
+      if variant.fetch(:pgrouting_major)
+        build_cache_tag = "#{github_pgrouting_image}:build-cache-#{variant_tag}"
+      else
+        build_cache_tag = "#{github_postgis_image}:build-cache-#{variant_tag}"
+      end
+
+      versions[postgres_version] ||= []
+      versions[postgres_version] << {
+        :postgis_major => variant.fetch(:postgis_major),
+        :pgrouting_major => variant.fetch(:pgrouting_major),
+        :variant_tag => variant_tag,
+        :variant_tags => variant_tags,
+        :build_cache_tag => build_cache_tag,
+        :docker_image_tags => docker_image_tags,
         :filename => filename,
         :platforms => platforms,
       }
@@ -76,21 +147,18 @@ library.each do |postgres|
 end
 
 template = ERB.new(File.read("docker-build.erb"), trim_mode: "-").result_with_hash({
-  :docker_image => docker_image,
   :versions => versions,
 })
 File.open("docker-build", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-build")
 
 template = ERB.new(File.read("docker-push.erb"), trim_mode: "-").result_with_hash({
-  :docker_image => docker_image,
   :versions => versions,
 })
 File.open("docker-push", "w") { |f| f.write(template) }
 FileUtils.chmod(0755, "docker-push")
 
 template = ERB.new(File.read("test.erb"), trim_mode: "-").result_with_hash({
-  :docker_image => docker_image,
   :versions => versions,
 })
 File.open("test", "w") { |f| f.write(template) }

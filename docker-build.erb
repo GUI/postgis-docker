@@ -2,15 +2,15 @@
 
 set -Eeuxo pipefail
 
-<%- versions.each do |postgresql_version, postgis_versions| -%>
-  <%- postgis_versions.each do |postgis_version, data| -%>
+<%- versions.each do |postgresql_version, variant_versions| -%>
+  <%- variant_versions.each do |data| -%>
     docker buildx build \
       --platform '<%= data.fetch(:platforms).join(",") %>' \
       --pull \
       --push \
-      --cache-from '<%= "type=registry,ref=#{docker_image}:build-cache-#{data.fetch(:postgis_tag)}" %>' \
-      --cache-to '<%= "type=registry,ref=#{docker_image}:build-cache-#{data.fetch(:postgis_tag)},mode=max" %>' \
-      --tag '<%= "localhost:5000/#{docker_image}:#{data.fetch(:postgis_tag)}" %>' \
+      --cache-from '<%= "type=registry,ref=#{data.fetch(:build_cache_tag)}" %>' \
+      --cache-to '<%= "type=registry,ref=#{data.fetch(:build_cache_tag)},mode=max" %>' \
+      --tag '<%= "localhost:5000/#{data.fetch(:build_cache_tag)}" %>' \
       --file <%= data.fetch(:filename) %> \
       .
   <%- end -%>

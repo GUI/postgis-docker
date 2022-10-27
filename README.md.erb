@@ -8,8 +8,8 @@ Images are based upon the [official Postgres images](https://hub.docker.com/_/po
 
 Images are available from either Docker Hub or GitHub Container Registery:
 
-- [docker.io/nickblah/postgis](https://hub.docker.com/repository/docker/nickblah/postgis)
-- [docker.io/nickblah/pgrouting](https://hub.docker.com/repository/docker/nickblah/pgrouting)
+- [docker.io/nickblah/postgis](https://hub.docker.com/r/nickblah/postgis)
+- [docker.io/nickblah/pgrouting](https://hub.docker.com/r/nickblah/pgrouting)
 - [ghcr.io/gui/postgis](https://github.com/users/GUI/packages/container/package/postgis)
 - [ghcr.io/gui/pgrouting](https://github.com/users/GUI/packages/container/package/pgrouting)
 

@@ -1,7 +1,7 @@
 FROM postgres:11.20-bullseye
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.3.3+dfsg-1.pgdg110+1
+  POSTGIS_VERSION=3.3.4+dfsg-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

@@ -1,9 +1,9 @@
 FROM postgres:15.3-bullseye
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.3.3+dfsg-1.pgdg110+1 \
+  POSTGIS_VERSION=3.3.4+dfsg-1.pgdg110+1 \
   PGROUTING_MAJOR=3 \
-  PGROUTING_VERSION=3.5.0-1~exp1.pgdg110+1
+  PGROUTING_VERSION=3.5.0-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

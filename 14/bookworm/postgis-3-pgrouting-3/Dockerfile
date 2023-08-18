@@ -1,7 +1,7 @@
 FROM postgres:14.9-bookworm
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.3.4+dfsg-1.pgdg120+1 \
+  POSTGIS_VERSION=3.4.0+dfsg-1.pgdg120+1 \
   PGROUTING_MAJOR=3 \
   PGROUTING_VERSION=3.5.0-1.pgdg120+1
 

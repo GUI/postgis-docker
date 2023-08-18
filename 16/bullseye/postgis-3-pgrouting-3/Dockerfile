@@ -1,7 +1,7 @@
 FROM postgres:16beta3-bullseye
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.3.4+dfsg-1.pgdg110+1 \
+  POSTGIS_VERSION=3.4.0+dfsg-1.pgdg110+1 \
   PGROUTING_MAJOR=3 \
   PGROUTING_VERSION=3.5.0-1.pgdg110+1
 

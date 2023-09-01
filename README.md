@@ -15,12 +15,12 @@ Images are available from either Docker Hub or GitHub Container Registery:
 
 ## Supported Tags and Respective Dockerfile Links
 
-- PostgreSQL 16beta3
-  - PostGIS 3: [`16beta3-postgis-3.4.0`, `16beta3-postgis-3.4`, `16beta3-postgis-3`, `16beta3-bookworm-postgis-3.4.0`, `16beta3-bookworm-postgis-3.4`, `16beta3-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/16/bookworm/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`16beta3-postgis-3.4.0-pgrouting-3.5.0`, `16beta3-postgis-3.4-pgrouting-3.5.0`, `16beta3-postgis-3-pgrouting-3.5.0`, `16beta3-bookworm-postgis-3.4.0-pgrouting-3.5.0`, `16beta3-bookworm-postgis-3.4-pgrouting-3.5.0`, `16beta3-bookworm-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/16/bookworm/postgis-3-pgrouting-3/Dockerfile)
-- PostgreSQL 16beta3-bullseye
-  - PostGIS 3: [`16beta3-bullseye-postgis-3.4.0`, `16beta3-bullseye-postgis-3.4`, `16beta3-bullseye-postgis-3`](https://github.com/GUI/variant-docker/blob/main/16/bullseye/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`16beta3-bullseye-postgis-3.4.0-pgrouting-3.5.0`, `16beta3-bullseye-postgis-3.4-pgrouting-3.5.0`, `16beta3-bullseye-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/16/bullseye/postgis-3-pgrouting-3/Dockerfile)
+- PostgreSQL 16rc1
+  - PostGIS 3: [`16rc1-postgis-3.4.0`, `16rc1-postgis-3.4`, `16rc1-postgis-3`, `16rc1-bookworm-postgis-3.4.0`, `16rc1-bookworm-postgis-3.4`, `16rc1-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/16/bookworm/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 3: [`16rc1-postgis-3.4.0-pgrouting-3.5.0`, `16rc1-postgis-3.4-pgrouting-3.5.0`, `16rc1-postgis-3-pgrouting-3.5.0`, `16rc1-bookworm-postgis-3.4.0-pgrouting-3.5.0`, `16rc1-bookworm-postgis-3.4-pgrouting-3.5.0`, `16rc1-bookworm-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/16/bookworm/postgis-3-pgrouting-3/Dockerfile)
+- PostgreSQL 16rc1-bullseye
+  - PostGIS 3: [`16rc1-bullseye-postgis-3.4.0`, `16rc1-bullseye-postgis-3.4`, `16rc1-bullseye-postgis-3`](https://github.com/GUI/variant-docker/blob/main/16/bullseye/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 3: [`16rc1-bullseye-postgis-3.4.0-pgrouting-3.5.0`, `16rc1-bullseye-postgis-3.4-pgrouting-3.5.0`, `16rc1-bullseye-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/16/bullseye/postgis-3-pgrouting-3/Dockerfile)
 - PostgreSQL 15
   - PostGIS 3: [`15.4-postgis-3.4.0`, `15.4-postgis-3.4`, `15.4-postgis-3`, `15-postgis-3.4.0`, `15-postgis-3.4`, `15-postgis-3`, `15.4-bookworm-postgis-3.4.0`, `15.4-bookworm-postgis-3.4`, `15.4-bookworm-postgis-3`, `15-bookworm-postgis-3.4.0`, `15-bookworm-postgis-3.4`, `15-bookworm-postgis-3`, `bookworm-postgis-3.4.0`, `bookworm-postgis-3.4`, `bookworm-postgis-3`, `latest`](https://github.com/GUI/variant-docker/blob/main/15/bookworm/postgis-3/Dockerfile)
   - PostGIS 3 with pgRouting 3: [`15.4-postgis-3.4.0-pgrouting-3.5.0`, `15.4-postgis-3.4-pgrouting-3.5.0`, `15.4-postgis-3-pgrouting-3.5.0`, `15-postgis-3.4.0-pgrouting-3.5.0`, `15-postgis-3.4-pgrouting-3.5.0`, `15-postgis-3-pgrouting-3.5.0`, `15.4-bookworm-postgis-3.4.0-pgrouting-3.5.0`, `15.4-bookworm-postgis-3.4-pgrouting-3.5.0`, `15.4-bookworm-postgis-3-pgrouting-3.5.0`, `15-bookworm-postgis-3.4.0-pgrouting-3.5.0`, `15-bookworm-postgis-3.4-pgrouting-3.5.0`, `15-bookworm-postgis-3-pgrouting-3.5.0`, `bookworm-postgis-3.4.0-pgrouting-3.5.0`, `bookworm-postgis-3.4-pgrouting-3.5.0`, `bookworm-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/15/bookworm/postgis-3-pgrouting-3/Dockerfile)

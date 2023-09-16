@@ -3,8 +3,8 @@
 set -Eeuo pipefail
 exitcode=0
 
-    printf "16rc1-postgis-3.4.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16rc1-postgis-3.4.0' 2>&1 || true)
+    printf "16.0-postgis-3.4.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.0-postgis-3.4.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -19,8 +19,8 @@ exitcode=0
       echo
     fi
 
-    printf "16rc1-postgis-3.4.0-pgrouting-3.5.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16rc1-postgis-3.4.0-pgrouting-3.5.0' 2>&1 || true)
+    printf "16.0-postgis-3.4.0-pgrouting-3.5.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.0-postgis-3.4.0-pgrouting-3.5.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -35,8 +35,8 @@ exitcode=0
       echo
     fi
 
-    printf "16rc1-bullseye-postgis-3.4.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16rc1-bullseye-postgis-3.4.0' 2>&1 || true)
+    printf "16.0-bullseye-postgis-3.4.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.0-bullseye-postgis-3.4.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -51,8 +51,8 @@ exitcode=0
       echo
     fi
 
-    printf "16rc1-bullseye-postgis-3.4.0-pgrouting-3.5.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16rc1-bullseye-postgis-3.4.0-pgrouting-3.5.0' 2>&1 || true)
+    printf "16.0-bullseye-postgis-3.4.0-pgrouting-3.5.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.0-bullseye-postgis-3.4.0-pgrouting-3.5.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

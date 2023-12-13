@@ -45,12 +45,6 @@ Images are available from either Docker Hub or GitHub Container Registery:
 - PostgreSQL 12-bullseye
   - PostGIS 3: [`12.17-bullseye-postgis-3.4.1`, `12.17-bullseye-postgis-3.4`, `12.17-bullseye-postgis-3`, `12-bullseye-postgis-3.4.1`, `12-bullseye-postgis-3.4`, `12-bullseye-postgis-3`](https://github.com/GUI/variant-docker/blob/main/12/bullseye/postgis-3/Dockerfile)
   - PostGIS 3 with pgRouting 3: [`12.17-bullseye-postgis-3.4.1-pgrouting-3.6.1`, `12.17-bullseye-postgis-3.4-pgrouting-3.6.1`, `12.17-bullseye-postgis-3-pgrouting-3.6.1`, `12-bullseye-postgis-3.4.1-pgrouting-3.6.1`, `12-bullseye-postgis-3.4-pgrouting-3.6.1`, `12-bullseye-postgis-3-pgrouting-3.6.1`](https://github.com/GUI/variant-docker/blob/main/12/bullseye/postgis-3-pgrouting-3/Dockerfile)
-- PostgreSQL 11-bookworm
-  - PostGIS 3: [`11.22-bookworm-postgis-3.3.4`, `11.22-bookworm-postgis-3.3`, `11.22-bookworm-postgis-3`, `11-bookworm-postgis-3.3.4`, `11-bookworm-postgis-3.3`, `11-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/11/bookworm/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`11.22-bookworm-postgis-3.3.4-pgrouting-3.5.0`, `11.22-bookworm-postgis-3.3-pgrouting-3.5.0`, `11.22-bookworm-postgis-3-pgrouting-3.5.0`, `11-bookworm-postgis-3.3.4-pgrouting-3.5.0`, `11-bookworm-postgis-3.3-pgrouting-3.5.0`, `11-bookworm-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/11/bookworm/postgis-3-pgrouting-3/Dockerfile)
-- PostgreSQL 11-bullseye
-  - PostGIS 3: [`11.22-bullseye-postgis-3.3.4`, `11.22-bullseye-postgis-3.3`, `11.22-bullseye-postgis-3`, `11-bullseye-postgis-3.3.4`, `11-bullseye-postgis-3.3`, `11-bullseye-postgis-3`](https://github.com/GUI/variant-docker/blob/main/11/bullseye/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`11.22-bullseye-postgis-3.3.4-pgrouting-3.5.0`, `11.22-bullseye-postgis-3.3-pgrouting-3.5.0`, `11.22-bullseye-postgis-3-pgrouting-3.5.0`, `11-bullseye-postgis-3.3.4-pgrouting-3.5.0`, `11-bullseye-postgis-3.3-pgrouting-3.5.0`, `11-bullseye-postgis-3-pgrouting-3.5.0`](https://github.com/GUI/variant-docker/blob/main/11/bullseye/postgis-3-pgrouting-3/Dockerfile)
 
 ## Image Variants
 

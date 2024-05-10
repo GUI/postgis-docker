@@ -1,7 +1,7 @@
-FROM postgres:16.1-bullseye
+FROM postgres:16.3-bullseye
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.4.1+dfsg-1.pgdg110+1
+  POSTGIS_VERSION=3.4.2+dfsg-1.pgdg110+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

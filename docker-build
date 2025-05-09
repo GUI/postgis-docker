@@ -6,179 +6,179 @@ set -Eeuxo pipefail
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.4-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.4-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.4-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.5-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.5-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.5-postgis-3.5.2' \
       --file 17/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.4-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.4-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.4-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.5-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.5-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.5-postgis-3.5.2-pgrouting-3.7.3' \
       --file 17/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.4-bullseye-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.4-bullseye-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.4-bullseye-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.5-bullseye-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-17.5-bullseye-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.5-bullseye-postgis-3.5.2' \
       --file 17/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.4-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.4-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.4-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.5-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-17.5-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.5-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
       --file 17/bullseye/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.8-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.8-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.8-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.9-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.9-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.9-postgis-3.5.2' \
       --file 16/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.8-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.8-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.8-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.9-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.9-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.9-postgis-3.5.2-pgrouting-3.7.3' \
       --file 16/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.8-bullseye-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.8-bullseye-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.8-bullseye-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.9-bullseye-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-16.9-bullseye-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.9-bullseye-postgis-3.5.2' \
       --file 16/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.8-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.8-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.8-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.9-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-16.9-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.9-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
       --file 16/bullseye/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.12-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.12-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.12-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.13-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.13-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.13-postgis-3.5.2' \
       --file 15/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.12-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.12-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.12-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.13-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.13-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.13-postgis-3.5.2-pgrouting-3.7.3' \
       --file 15/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.12-bullseye-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.12-bullseye-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.12-bullseye-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.13-bullseye-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-15.13-bullseye-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.13-bullseye-postgis-3.5.2' \
       --file 15/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.12-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.12-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.12-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.13-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-15.13-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.13-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
       --file 15/bullseye/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.17-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.17-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.17-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.18-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.18-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.18-postgis-3.5.2' \
       --file 14/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.17-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.17-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.17-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.18-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.18-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.18-postgis-3.5.2-pgrouting-3.7.3' \
       --file 14/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.17-bullseye-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.17-bullseye-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.17-bullseye-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.18-bullseye-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-14.18-bullseye-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.18-bullseye-postgis-3.5.2' \
       --file 14/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.17-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.17-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.17-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.18-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-14.18-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.18-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
       --file 14/bullseye/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.20-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.20-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.20-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.21-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.21-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.21-postgis-3.5.2' \
       --file 13/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.20-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.20-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.20-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.21-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.21-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.21-postgis-3.5.2-pgrouting-3.7.3' \
       --file 13/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.20-bullseye-postgis-3.5.2' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.20-bullseye-postgis-3.5.2,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.20-bullseye-postgis-3.5.2' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.21-bullseye-postgis-3.5.2' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-13.21-bullseye-postgis-3.5.2,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.21-bullseye-postgis-3.5.2' \
       --file 13/bullseye/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.20-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.20-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.20-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.21-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-13.21-bullseye-postgis-3.5.2-pgrouting-3.7.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.21-bullseye-postgis-3.5.2-pgrouting-3.7.3' \
       --file 13/bullseye/postgis-3-pgrouting-3/Dockerfile \
       .

@@ -3,6 +3,38 @@
 set -Eeuo pipefail
 exitcode=0
 
+    printf "18beta1-postgis-3.5.3: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-18beta1-postgis-3.5.3' 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
+    printf "18beta1-postgis-3.5.3-pgrouting-3.8.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18beta1-postgis-3.5.3-pgrouting-3.8.0' 2>&1 || true)
+    if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
+      exitcode=1
+      echo "Error"
+      echo "$output"
+      echo
+    elif [[ "$output" =~ "PostGIS Tests: OK" ]]; then
+      echo "OK"
+    else
+      exitcode=1
+      echo "Unexpected Error"
+      echo "$output"
+      echo
+    fi
+
     printf "17.5-postgis-3.5.3: "
     output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.5-postgis-3.5.3' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then

@@ -5,15 +5,15 @@ set -Eeuxo pipefail
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta1-postgis-3.5.3' \
-      --tag 'ghcr.io/gui/postgis:18beta1-postgis-3.5.3' --tag 'nickblah/postgis:18beta1-postgis-3.5.3' --tag 'ghcr.io/gui/postgis:18beta1-postgis-3.5' --tag 'nickblah/postgis:18beta1-postgis-3.5' --tag 'ghcr.io/gui/postgis:18beta1-postgis-3' --tag 'nickblah/postgis:18beta1-postgis-3' --tag 'ghcr.io/gui/postgis:18beta1-bookworm-postgis-3.5.3' --tag 'nickblah/postgis:18beta1-bookworm-postgis-3.5.3' --tag 'ghcr.io/gui/postgis:18beta1-bookworm-postgis-3.5' --tag 'nickblah/postgis:18beta1-bookworm-postgis-3.5' --tag 'ghcr.io/gui/postgis:18beta1-bookworm-postgis-3' --tag 'nickblah/postgis:18beta1-bookworm-postgis-3' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta2-postgis-3.5.3' \
+      --tag 'ghcr.io/gui/postgis:18beta2-postgis-3.5.3' --tag 'nickblah/postgis:18beta2-postgis-3.5.3' --tag 'ghcr.io/gui/postgis:18beta2-postgis-3.5' --tag 'nickblah/postgis:18beta2-postgis-3.5' --tag 'ghcr.io/gui/postgis:18beta2-postgis-3' --tag 'nickblah/postgis:18beta2-postgis-3' --tag 'ghcr.io/gui/postgis:18beta2-bookworm-postgis-3.5.3' --tag 'nickblah/postgis:18beta2-bookworm-postgis-3.5.3' --tag 'ghcr.io/gui/postgis:18beta2-bookworm-postgis-3.5' --tag 'nickblah/postgis:18beta2-bookworm-postgis-3.5' --tag 'ghcr.io/gui/postgis:18beta2-bookworm-postgis-3' --tag 'nickblah/postgis:18beta2-bookworm-postgis-3' \
       --file 18/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta1-postgis-3.5.3-pgrouting-3.8.0' \
-      --tag 'ghcr.io/gui/pgrouting:18beta1-postgis-3.5.3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-postgis-3.5.3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta1-postgis-3.5-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-postgis-3.5-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta1-postgis-3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-postgis-3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta1-bookworm-postgis-3.5.3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-bookworm-postgis-3.5.3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta1-bookworm-postgis-3.5-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-bookworm-postgis-3.5-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta1-bookworm-postgis-3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta1-bookworm-postgis-3-pgrouting-3.8.0' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta2-postgis-3.5.3-pgrouting-3.8.0' \
+      --tag 'ghcr.io/gui/pgrouting:18beta2-postgis-3.5.3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-postgis-3.5.3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta2-postgis-3.5-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-postgis-3.5-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta2-postgis-3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-postgis-3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta2-bookworm-postgis-3.5.3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-bookworm-postgis-3.5.3-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta2-bookworm-postgis-3.5-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-bookworm-postgis-3.5-pgrouting-3.8.0' --tag 'ghcr.io/gui/pgrouting:18beta2-bookworm-postgis-3-pgrouting-3.8.0' --tag 'nickblah/pgrouting:18beta2-bookworm-postgis-3-pgrouting-3.8.0' \
       --file 18/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \

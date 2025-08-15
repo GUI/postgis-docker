@@ -1,9 +1,9 @@
-FROM postgres:13.21-trixie
+FROM postgres:13.22-trixie
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.5.3+dfsg-1~exp1.pgdg130+1 \
   PGROUTING_MAJOR=3 \
-  PGROUTING_VERSION=3.8.0-1~exp1.pgdg130+1
+  PGROUTING_VERSION=3.8.0-1.pgdg130+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

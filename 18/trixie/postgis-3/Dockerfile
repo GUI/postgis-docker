@@ -1,7 +1,7 @@
 FROM postgres:18beta3-trixie
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.5.3+dfsg-1~exp1.pgdg130+1
+  POSTGIS_VERSION=3.5.3+dfsg-2.pgdg13+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

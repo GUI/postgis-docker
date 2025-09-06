@@ -6,36 +6,36 @@ set -Eeuxo pipefail
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta3-postgis-3.6.0' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta3-postgis-3.6.0,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-18beta3-postgis-3.6.0' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18rc1-postgis-3.6.0' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18rc1-postgis-3.6.0,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-18rc1-postgis-3.6.0' \
       --file 18/trixie/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta3-postgis-3.6.0-pgrouting-3.8.0' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta3-postgis-3.6.0-pgrouting-3.8.0,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18beta3-postgis-3.6.0-pgrouting-3.8.0' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18rc1-postgis-3.6.0-pgrouting-3.8.0' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18rc1-postgis-3.6.0-pgrouting-3.8.0,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18rc1-postgis-3.6.0-pgrouting-3.8.0' \
       --file 18/trixie/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta3-bookworm-postgis-3.6.0' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18beta3-bookworm-postgis-3.6.0,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-18beta3-bookworm-postgis-3.6.0' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18rc1-bookworm-postgis-3.6.0' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18rc1-bookworm-postgis-3.6.0,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-18rc1-bookworm-postgis-3.6.0' \
       --file 18/bookworm/postgis-3/Dockerfile \
       .
     docker buildx build \
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
-      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta3-bookworm-postgis-3.6.0-pgrouting-3.8.0' \
-      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18beta3-bookworm-postgis-3.6.0-pgrouting-3.8.0,mode=max' \
-      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18beta3-bookworm-postgis-3.6.0-pgrouting-3.8.0' \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18rc1-bookworm-postgis-3.6.0-pgrouting-3.8.0' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-18rc1-bookworm-postgis-3.6.0-pgrouting-3.8.0,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18rc1-bookworm-postgis-3.6.0-pgrouting-3.8.0' \
       --file 18/bookworm/postgis-3-pgrouting-3/Dockerfile \
       .
     docker buildx build \

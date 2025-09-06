@@ -15,12 +15,12 @@ Images are available from either Docker Hub or GitHub Container Registery:
 
 ## Supported Tags and Respective Dockerfile Links
 
-- PostgreSQL 18beta3
-  - PostGIS 3: [`18beta3-postgis-3.6.0`, `18beta3-postgis-3.6`, `18beta3-postgis-3`, `18beta3-trixie-postgis-3.6.0`, `18beta3-trixie-postgis-3.6`, `18beta3-trixie-postgis-3`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`18beta3-postgis-3.6.0-pgrouting-3.8.0`, `18beta3-postgis-3.6-pgrouting-3.8.0`, `18beta3-postgis-3-pgrouting-3.8.0`, `18beta3-trixie-postgis-3.6.0-pgrouting-3.8.0`, `18beta3-trixie-postgis-3.6-pgrouting-3.8.0`, `18beta3-trixie-postgis-3-pgrouting-3.8.0`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3-pgrouting-3/Dockerfile)
-- PostgreSQL 18beta3-bookworm
-  - PostGIS 3: [`18beta3-bookworm-postgis-3.6.0`, `18beta3-bookworm-postgis-3.6`, `18beta3-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/18/bookworm/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 3: [`18beta3-bookworm-postgis-3.6.0-pgrouting-3.8.0`, `18beta3-bookworm-postgis-3.6-pgrouting-3.8.0`, `18beta3-bookworm-postgis-3-pgrouting-3.8.0`](https://github.com/GUI/variant-docker/blob/main/18/bookworm/postgis-3-pgrouting-3/Dockerfile)
+- PostgreSQL 18rc1
+  - PostGIS 3: [`18rc1-postgis-3.6.0`, `18rc1-postgis-3.6`, `18rc1-postgis-3`, `18rc1-trixie-postgis-3.6.0`, `18rc1-trixie-postgis-3.6`, `18rc1-trixie-postgis-3`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 3: [`18rc1-postgis-3.6.0-pgrouting-3.8.0`, `18rc1-postgis-3.6-pgrouting-3.8.0`, `18rc1-postgis-3-pgrouting-3.8.0`, `18rc1-trixie-postgis-3.6.0-pgrouting-3.8.0`, `18rc1-trixie-postgis-3.6-pgrouting-3.8.0`, `18rc1-trixie-postgis-3-pgrouting-3.8.0`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3-pgrouting-3/Dockerfile)
+- PostgreSQL 18rc1-bookworm
+  - PostGIS 3: [`18rc1-bookworm-postgis-3.6.0`, `18rc1-bookworm-postgis-3.6`, `18rc1-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/18/bookworm/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 3: [`18rc1-bookworm-postgis-3.6.0-pgrouting-3.8.0`, `18rc1-bookworm-postgis-3.6-pgrouting-3.8.0`, `18rc1-bookworm-postgis-3-pgrouting-3.8.0`](https://github.com/GUI/variant-docker/blob/main/18/bookworm/postgis-3-pgrouting-3/Dockerfile)
 - PostgreSQL 17
   - PostGIS 3: [`17.6-postgis-3.6.0`, `17.6-postgis-3.6`, `17.6-postgis-3`, `17-postgis-3.6.0`, `17-postgis-3.6`, `17-postgis-3`, `17.6-trixie-postgis-3.6.0`, `17.6-trixie-postgis-3.6`, `17.6-trixie-postgis-3`, `17-trixie-postgis-3.6.0`, `17-trixie-postgis-3.6`, `17-trixie-postgis-3`, `trixie-postgis-3.6.0`, `trixie-postgis-3.6`, `trixie-postgis-3`, `latest`](https://github.com/GUI/variant-docker/blob/main/17/trixie/postgis-3/Dockerfile)
   - PostGIS 3 with pgRouting 3: [`17.6-postgis-3.6.0-pgrouting-3.8.0`, `17.6-postgis-3.6-pgrouting-3.8.0`, `17.6-postgis-3-pgrouting-3.8.0`, `17-postgis-3.6.0-pgrouting-3.8.0`, `17-postgis-3.6-pgrouting-3.8.0`, `17-postgis-3-pgrouting-3.8.0`, `17.6-trixie-postgis-3.6.0-pgrouting-3.8.0`, `17.6-trixie-postgis-3.6-pgrouting-3.8.0`, `17.6-trixie-postgis-3-pgrouting-3.8.0`, `17-trixie-postgis-3.6.0-pgrouting-3.8.0`, `17-trixie-postgis-3.6-pgrouting-3.8.0`, `17-trixie-postgis-3-pgrouting-3.8.0`, `trixie-postgis-3.6.0-pgrouting-3.8.0`, `trixie-postgis-3.6-pgrouting-3.8.0`, `trixie-postgis-3-pgrouting-3.8.0`](https://github.com/GUI/variant-docker/blob/main/17/trixie/postgis-3-pgrouting-3/Dockerfile)

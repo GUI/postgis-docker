@@ -1,9 +1,9 @@
-FROM postgres:18.0-bookworm
+FROM postgres:13.23-trixie
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.6.0+dfsg-3.pgdg12+1 \
-  PGROUTING_MAJOR=3 \
-  PGROUTING_VERSION=3.8.0-2.pgdg12+1
+  POSTGIS_VERSION=3.6.0+dfsg-3.pgdg13+1 \
+  PGROUTING_MAJOR=4 \
+  PGROUTING_VERSION=4.0.0-1.pgdg13+1
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

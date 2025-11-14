@@ -3,8 +3,8 @@
 set -Eeuo pipefail
 exitcode=0
 
-    printf "18.0-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-18.0-postgis-3.6.0' 2>&1 || true)
+    printf "18.1-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-18.1-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -19,8 +19,8 @@ exitcode=0
       echo
     fi
 
-    printf "18.0-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18.0-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "18.1-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18.1-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -35,8 +35,8 @@ exitcode=0
       echo
     fi
 
-    printf "18.0-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-18.0-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "18.1-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-18.1-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -51,8 +51,8 @@ exitcode=0
       echo
     fi
 
-    printf "18.0-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18.0-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "18.1-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-18.1-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -67,8 +67,8 @@ exitcode=0
       echo
     fi
 
-    printf "17.6-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.6-postgis-3.6.0' 2>&1 || true)
+    printf "17.7-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.7-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -83,8 +83,8 @@ exitcode=0
       echo
     fi
 
-    printf "17.6-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.6-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "17.7-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.7-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -99,8 +99,8 @@ exitcode=0
       echo
     fi
 
-    printf "17.6-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.6-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "17.7-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-17.7-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -115,8 +115,8 @@ exitcode=0
       echo
     fi
 
-    printf "17.6-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.6-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "17.7-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-17.7-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -131,8 +131,8 @@ exitcode=0
       echo
     fi
 
-    printf "16.10-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.10-postgis-3.6.0' 2>&1 || true)
+    printf "16.11-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.11-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -147,8 +147,8 @@ exitcode=0
       echo
     fi
 
-    printf "16.10-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.10-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "16.11-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.11-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -163,8 +163,8 @@ exitcode=0
       echo
     fi
 
-    printf "16.10-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.10-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "16.11-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-16.11-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -179,8 +179,8 @@ exitcode=0
       echo
     fi
 
-    printf "16.10-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.10-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "16.11-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-16.11-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -195,8 +195,8 @@ exitcode=0
       echo
     fi
 
-    printf "15.14-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.14-postgis-3.6.0' 2>&1 || true)
+    printf "15.15-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.15-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -211,8 +211,8 @@ exitcode=0
       echo
     fi
 
-    printf "15.14-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.14-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "15.15-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.15-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -227,8 +227,8 @@ exitcode=0
       echo
     fi
 
-    printf "15.14-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.14-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "15.15-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-15.15-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -243,8 +243,8 @@ exitcode=0
       echo
     fi
 
-    printf "15.14-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.14-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "15.15-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-15.15-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -259,8 +259,8 @@ exitcode=0
       echo
     fi
 
-    printf "14.19-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.19-postgis-3.6.0' 2>&1 || true)
+    printf "14.20-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.20-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -275,8 +275,8 @@ exitcode=0
       echo
     fi
 
-    printf "14.19-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.19-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "14.20-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.20-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -291,8 +291,8 @@ exitcode=0
       echo
     fi
 
-    printf "14.19-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.19-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "14.20-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-14.20-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -307,8 +307,8 @@ exitcode=0
       echo
     fi
 
-    printf "14.19-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.19-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "14.20-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-14.20-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -323,8 +323,8 @@ exitcode=0
       echo
     fi
 
-    printf "13.22-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.22-postgis-3.6.0' 2>&1 || true)
+    printf "13.23-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.23-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -339,8 +339,8 @@ exitcode=0
       echo
     fi
 
-    printf "13.22-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.22-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "13.23-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.23-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -355,8 +355,8 @@ exitcode=0
       echo
     fi
 
-    printf "13.22-bookworm-postgis-3.6.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.22-bookworm-postgis-3.6.0' 2>&1 || true)
+    printf "13.23-bookworm-postgis-3.6.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/postgis:build-cache-13.23-bookworm-postgis-3.6.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"
@@ -371,8 +371,8 @@ exitcode=0
       echo
     fi
 
-    printf "13.22-bookworm-postgis-3.6.0-pgrouting-3.8.0: "
-    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.22-bookworm-postgis-3.6.0-pgrouting-3.8.0' 2>&1 || true)
+    printf "13.23-bookworm-postgis-3.6.0-pgrouting-4.0.0: "
+    output=$(docker run -v $(pwd)/test.sh:/docker-entrypoint-initdb.d/test.sh -e POSTGRES_PASSWORD=password --rm 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-13.23-bookworm-postgis-3.6.0-pgrouting-4.0.0' 2>&1 || true)
     if [[ "$output" =~ "PostGIS Tests: Error" ]]; then
       exitcode=1
       echo "Error"

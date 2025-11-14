@@ -1,4 +1,4 @@
-FROM postgres:13.22-bookworm
+FROM postgres:13.23-bookworm
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.6.0+dfsg-3.pgdg12+1

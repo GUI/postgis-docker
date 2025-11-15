@@ -1,7 +1,7 @@
 FROM postgres:18.1-trixie
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.6.0+dfsg-3.pgdg13+1 \
+  POSTGIS_VERSION=3.6.1+dfsg-1~exp1.pgdg13+1 \
   PGROUTING_MAJOR=4 \
   PGROUTING_VERSION=4.0.0-1.pgdg13+1
 

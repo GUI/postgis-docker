@@ -1,4 +1,4 @@
-FROM postgres:16.13-trixie
+FROM postgres:16.14-trixie
 
 ENV POSTGIS_MAJOR=3 \
   POSTGIS_VERSION=3.6.3+dfsg-1.pgdg13+1

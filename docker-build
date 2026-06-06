@@ -6,6 +6,42 @@ set -Eeuxo pipefail
       --platform 'linux/amd64,linux/arm64' \
       --pull \
       --push \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-19beta1-postgis-3.6.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-19beta1-postgis-3.6.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-19beta1-postgis-3.6.3' \
+      --file 19/trixie/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --pull \
+      --push \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-19beta1-postgis-3.6.3-pgrouting-4.0.1' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-19beta1-postgis-3.6.3-pgrouting-4.0.1,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-19beta1-postgis-3.6.3-pgrouting-4.0.1' \
+      --file 19/trixie/postgis-3-pgrouting-4/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --pull \
+      --push \
+      --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-19beta1-bookworm-postgis-3.6.3' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-19beta1-bookworm-postgis-3.6.3,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-19beta1-bookworm-postgis-3.6.3' \
+      --file 19/bookworm/postgis-3/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --pull \
+      --push \
+      --cache-from 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-19beta1-bookworm-postgis-3.6.3-pgrouting-4.0.1' \
+      --cache-to 'type=registry,ref=ghcr.io/gui/pgrouting:build-cache-19beta1-bookworm-postgis-3.6.3-pgrouting-4.0.1,mode=max' \
+      --tag 'localhost:5000/ghcr.io/gui/pgrouting:build-cache-19beta1-bookworm-postgis-3.6.3-pgrouting-4.0.1' \
+      --file 19/bookworm/postgis-3-pgrouting-4/Dockerfile \
+      .
+    docker buildx build \
+      --platform 'linux/amd64,linux/arm64' \
+      --pull \
+      --push \
       --cache-from 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18.4-postgis-3.6.3' \
       --cache-to 'type=registry,ref=ghcr.io/gui/postgis:build-cache-18.4-postgis-3.6.3,mode=max' \
       --tag 'localhost:5000/ghcr.io/gui/postgis:build-cache-18.4-postgis-3.6.3' \

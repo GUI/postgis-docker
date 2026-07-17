@@ -15,12 +15,12 @@ Images are available from either Docker Hub or GitHub Container Registery:
 
 ## Supported Tags and Respective Dockerfile Links
 
-- PostgreSQL 19beta1
-  - PostGIS 3: [`19beta1-postgis-3.6.4`, `19beta1-postgis-3.6`, `19beta1-postgis-3`, `19beta1-trixie-postgis-3.6.4`, `19beta1-trixie-postgis-3.6`, `19beta1-trixie-postgis-3`](https://github.com/GUI/variant-docker/blob/main/19/trixie/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 4: [`19beta1-postgis-3.6.4-pgrouting-4.0.1`, `19beta1-postgis-3.6-pgrouting-4.0.1`, `19beta1-postgis-3-pgrouting-4.0.1`, `19beta1-trixie-postgis-3.6.4-pgrouting-4.0.1`, `19beta1-trixie-postgis-3.6-pgrouting-4.0.1`, `19beta1-trixie-postgis-3-pgrouting-4.0.1`](https://github.com/GUI/variant-docker/blob/main/19/trixie/postgis-3-pgrouting-4/Dockerfile)
-- PostgreSQL 19beta1-bookworm
-  - PostGIS 3: [`19beta1-bookworm-postgis-3.6.4`, `19beta1-bookworm-postgis-3.6`, `19beta1-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/19/bookworm/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 4: [`19beta1-bookworm-postgis-3.6.4-pgrouting-4.0.1`, `19beta1-bookworm-postgis-3.6-pgrouting-4.0.1`, `19beta1-bookworm-postgis-3-pgrouting-4.0.1`](https://github.com/GUI/variant-docker/blob/main/19/bookworm/postgis-3-pgrouting-4/Dockerfile)
+- PostgreSQL 19beta2
+  - PostGIS 3: [`19beta2-postgis-3.6.4`, `19beta2-postgis-3.6`, `19beta2-postgis-3`, `19beta2-trixie-postgis-3.6.4`, `19beta2-trixie-postgis-3.6`, `19beta2-trixie-postgis-3`](https://github.com/GUI/variant-docker/blob/main/19/trixie/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 4: [`19beta2-postgis-3.6.4-pgrouting-4.0.1`, `19beta2-postgis-3.6-pgrouting-4.0.1`, `19beta2-postgis-3-pgrouting-4.0.1`, `19beta2-trixie-postgis-3.6.4-pgrouting-4.0.1`, `19beta2-trixie-postgis-3.6-pgrouting-4.0.1`, `19beta2-trixie-postgis-3-pgrouting-4.0.1`](https://github.com/GUI/variant-docker/blob/main/19/trixie/postgis-3-pgrouting-4/Dockerfile)
+- PostgreSQL 19beta2-bookworm
+  - PostGIS 3: [`19beta2-bookworm-postgis-3.6.4`, `19beta2-bookworm-postgis-3.6`, `19beta2-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/19/bookworm/postgis-3/Dockerfile)
+  - PostGIS 3 with pgRouting 4: [`19beta2-bookworm-postgis-3.6.4-pgrouting-4.0.1`, `19beta2-bookworm-postgis-3.6-pgrouting-4.0.1`, `19beta2-bookworm-postgis-3-pgrouting-4.0.1`](https://github.com/GUI/variant-docker/blob/main/19/bookworm/postgis-3-pgrouting-4/Dockerfile)
 - PostgreSQL 18
   - PostGIS 3: [`18.4-postgis-3.6.4`, `18.4-postgis-3.6`, `18.4-postgis-3`, `18-postgis-3.6.4`, `18-postgis-3.6`, `18-postgis-3`, `18.4-trixie-postgis-3.6.4`, `18.4-trixie-postgis-3.6`, `18.4-trixie-postgis-3`, `18-trixie-postgis-3.6.4`, `18-trixie-postgis-3.6`, `18-trixie-postgis-3`, `trixie-postgis-3.6.4`, `trixie-postgis-3.6`, `trixie-postgis-3`, `latest`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3/Dockerfile)
   - PostGIS 3 with pgRouting 4: [`18.4-postgis-3.6.4-pgrouting-4.0.1`, `18.4-postgis-3.6-pgrouting-4.0.1`, `18.4-postgis-3-pgrouting-4.0.1`, `18-postgis-3.6.4-pgrouting-4.0.1`, `18-postgis-3.6-pgrouting-4.0.1`, `18-postgis-3-pgrouting-4.0.1`, `18.4-trixie-postgis-3.6.4-pgrouting-4.0.1`, `18.4-trixie-postgis-3.6-pgrouting-4.0.1`, `18.4-trixie-postgis-3-pgrouting-4.0.1`, `18-trixie-postgis-3.6.4-pgrouting-4.0.1`, `18-trixie-postgis-3.6-pgrouting-4.0.1`, `18-trixie-postgis-3-pgrouting-4.0.1`, `trixie-postgis-3.6.4-pgrouting-4.0.1`, `trixie-postgis-3.6-pgrouting-4.0.1`, `trixie-postgis-3-pgrouting-4.0.1`](https://github.com/GUI/variant-docker/blob/main/18/trixie/postgis-3-pgrouting-4/Dockerfile)

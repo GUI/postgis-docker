@@ -1,7 +1,7 @@
-FROM postgres:16.15-trixie
+FROM postgres:16.16-trixie
 
 ENV POSTGIS_MAJOR=3 \
-  POSTGIS_VERSION=3.7.0+dfsg-1.pgdg13+1
+  POSTGIS_VERSION=3.7.0+dfsg-1.pgdg13+2
 
 RUN apt-get update && \
   apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR && \

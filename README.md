@@ -45,12 +45,6 @@ Images are available from either Docker Hub or GitHub Container Registery:
 - PostgreSQL 15-bookworm
   - PostGIS 3: [`15.20-bookworm-postgis-3.7.0`, `15.20-bookworm-postgis-3.7`, `15.20-bookworm-postgis-3`, `15-bookworm-postgis-3.7.0`, `15-bookworm-postgis-3.7`, `15-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/15/bookworm/postgis-3/Dockerfile)
   - PostGIS 3 with pgRouting 4: [`15.20-bookworm-postgis-3.7.0-pgrouting-4.0.2`, `15.20-bookworm-postgis-3.7-pgrouting-4.0.2`, `15.20-bookworm-postgis-3-pgrouting-4.0.2`, `15-bookworm-postgis-3.7.0-pgrouting-4.0.2`, `15-bookworm-postgis-3.7-pgrouting-4.0.2`, `15-bookworm-postgis-3-pgrouting-4.0.2`](https://github.com/GUI/variant-docker/blob/main/15/bookworm/postgis-3-pgrouting-4/Dockerfile)
-- PostgreSQL 14
-  - PostGIS 3: [`14.25-postgis-3.7.0`, `14.25-postgis-3.7`, `14.25-postgis-3`, `14-postgis-3.7.0`, `14-postgis-3.7`, `14-postgis-3`, `14.25-trixie-postgis-3.7.0`, `14.25-trixie-postgis-3.7`, `14.25-trixie-postgis-3`, `14-trixie-postgis-3.7.0`, `14-trixie-postgis-3.7`, `14-trixie-postgis-3`](https://github.com/GUI/variant-docker/blob/main/14/trixie/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 4: [`14.25-postgis-3.7.0-pgrouting-4.0.2`, `14.25-postgis-3.7-pgrouting-4.0.2`, `14.25-postgis-3-pgrouting-4.0.2`, `14-postgis-3.7.0-pgrouting-4.0.2`, `14-postgis-3.7-pgrouting-4.0.2`, `14-postgis-3-pgrouting-4.0.2`, `14.25-trixie-postgis-3.7.0-pgrouting-4.0.2`, `14.25-trixie-postgis-3.7-pgrouting-4.0.2`, `14.25-trixie-postgis-3-pgrouting-4.0.2`, `14-trixie-postgis-3.7.0-pgrouting-4.0.2`, `14-trixie-postgis-3.7-pgrouting-4.0.2`, `14-trixie-postgis-3-pgrouting-4.0.2`](https://github.com/GUI/variant-docker/blob/main/14/trixie/postgis-3-pgrouting-4/Dockerfile)
-- PostgreSQL 14-bookworm
-  - PostGIS 3: [`14.25-bookworm-postgis-3.7.0`, `14.25-bookworm-postgis-3.7`, `14.25-bookworm-postgis-3`, `14-bookworm-postgis-3.7.0`, `14-bookworm-postgis-3.7`, `14-bookworm-postgis-3`](https://github.com/GUI/variant-docker/blob/main/14/bookworm/postgis-3/Dockerfile)
-  - PostGIS 3 with pgRouting 4: [`14.25-bookworm-postgis-3.7.0-pgrouting-4.0.2`, `14.25-bookworm-postgis-3.7-pgrouting-4.0.2`, `14.25-bookworm-postgis-3-pgrouting-4.0.2`, `14-bookworm-postgis-3.7.0-pgrouting-4.0.2`, `14-bookworm-postgis-3.7-pgrouting-4.0.2`, `14-bookworm-postgis-3-pgrouting-4.0.2`](https://github.com/GUI/variant-docker/blob/main/14/bookworm/postgis-3-pgrouting-4/Dockerfile)
 
 ## Image Variants
 
